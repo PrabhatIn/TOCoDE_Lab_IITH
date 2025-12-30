@@ -178,10 +178,16 @@ const NEWS_ITEMS: NewsItem[] = [
     description: "We are excited to announce that Prof. Prabhat and Prof. Chandra have been awarded ARG funding for above-mentioned project from Anusandhan National Research Foundation, New Delhi, India"
   },
   {
-    date: "Nov 28, 2025",
+    date: "Nov 25, 2025",
     category: "Publication",
-    title: "New paper accepted in Journal of Mechanical Design",
-    description: "Our work on 'Multiphysics Topology Optimization' has been accepted for publication."
+    title: "New paper accepted in Soft Computing Journal",
+    description: "Our work on 'PyTOaCNN: Topology optimization using an adaptive convolutional neural network in Python' has been accepted for publication."
+  },
+  {
+    date: "Jun 06, 2025",
+    category: "Publication",
+    title: "New paper accepted in Optimization and Engineering Journal",
+    description: "Our work on 'TOPress3D: 3D topology optimization with design-dependent pressure loads in MATLAB' has been accepted for publication."
   },
   {
     date: "Nov 15, 2025",
@@ -190,10 +196,10 @@ const NEWS_ITEMS: NewsItem[] = [
     description: "Conducted a hands-on workshop at IIT Hyderabad connecting brilliant minds in engineering."
   },
   {
-    date: "Oct 01, 2025",
+    date: "Dec 10, 2025",
     category: "Talk",
-    title: "Keynote at International Mechanics Conference",
-    description: "Professor presented our latest findings on compliant mechanisms."
+    title: "TOCoDE lab presented at iNaCoMM 2025",
+    description: "TOCoDE team members presented four papers in iNaCoMM 2025 international conference"
   }
 ];
 
