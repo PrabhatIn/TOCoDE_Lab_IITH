@@ -199,7 +199,7 @@ const NEWS_ITEMS: NewsItem[] = [
     date: "Dec 10, 2025",
     category: "Talk",
     title: "TOCoDE lab presented at iNaCoMM 2025",
-    description: "TOCoDE team members presented four papers in iNaCoMM 2025 international conference"
+    description: "TOCoDE team presented four papers in iNaCoMM2025 international conference held at IIT Hyderabad"
   }
 ];
 
