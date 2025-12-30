@@ -174,8 +174,7 @@ const NEWS_ITEMS: NewsItem[] = [
   {
     date: "Dec 18, 2025",
     category: "Funding",
-    title: "Design and Development of Composite Structure for High-Velocity Impact
-Energy Absorption and Dissipation using Multiscale Topology Optimization",
+    title: "Design and Development of Composite Structure for High-Velocity Impact Energy Absorption and Dissipation using Multiscale Topology Optimization",
     description: "We are excited to announce that Prof. Prabhat and Prof. Chandra have received ARG funding for the above title from Anusandhan National Research Foundation, New Delhi, India"
   },
   {
