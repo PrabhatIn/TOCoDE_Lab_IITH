@@ -172,10 +172,11 @@ const RESEARCH_AREAS = [
 
 const NEWS_ITEMS: NewsItem[] = [
   {
-    date: "Dec 12, 2025",
+    date: "Dec 18, 2025",
     category: "Funding",
-    title: "Lab secures new grant for Smart Materials",
-    description: "We are excited to announce a new partnership focused on AI integration in material science."
+    title: "Design and Development of Composite Structure for High-Velocity Impact
+Energy Absorption and Dissipation using Multiscale Topology Optimization",
+    description: "We are excited to announce that Prof. Prabhat and Prof. Chandra have received ARG funding for the above title from Anusandhan National Research Foundation, New Delhi, India"
   },
   {
     date: "Nov 28, 2025",
