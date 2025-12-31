@@ -36,16 +36,14 @@ export const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4 text-foreground">Quick Links</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="/research" className="hover:text-primary transition-colors">Research</a></li>
               <li><a href="/publications" className="hover:text-primary transition-colors">Publications</a></li>
               <li><a href="/team" className="hover:text-primary transition-colors">Team</a></li>
-              <li><a href="/positions" className="hover:text-primary transition-colors">Join Us</a></li>
             </ul>
           </div>
         </div>
 
         <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} ToCoDE Lab, IIT Hyderabad. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} TOCoDE Lab, IIT Hyderabad. All rights reserved.</p>
         </div>
       </div>
     </footer>

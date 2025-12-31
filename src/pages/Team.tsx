@@ -44,6 +44,7 @@ const Team = () => {
   // CURRENT MEMBERS DATA
   const phdStudents = [
     { name: "Swagatam Islam Sarkar", role: "PhD Scholar", image: "/Images/Team/Swagatam.jpg" },
+    { name: "Raghvendra  K", role: "PhD Scholar", image: "/Images/Team/Raghvendra.jpg" },
     { name: "Sukka Siddhardha", role: "PhD Scholar", image: "/Images/Team/sukka.jpg" },
   ];
 

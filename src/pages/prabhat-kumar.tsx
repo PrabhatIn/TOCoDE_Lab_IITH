@@ -7,7 +7,8 @@ import {
   ScrollText, 
   Globe, 
   ArrowLeft,
-  Briefcase
+  Briefcase,
+  Users // Added for Leadership section
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -42,15 +43,16 @@ const PrabhatProfile = () => {
       { degree: "B.Tech Mechanical Engineering", school: "NIT Warangal" },
     ],
 
+    // Updated to match Home Page order exactly
     interests: [
-      "Topology Optimization",
+      "Multi-disciplinary/-scale Topology Optimization",
       "Structural Optimization",
       "Soft Robotics",
-      "Data (AI/ML)-Driven Design",
+      "Data (AI/ML)-Driven Design", // Added/Ensured
       "Compliant Mechanisms",
       "Inverse Design",
-      "Computational Mechanics",
-      "Computational Contact Mechanics"
+      "Computational Contact Mechanics",
+      "Computational Mechanics"
     ],
 
     awards: [
@@ -63,6 +65,22 @@ const PrabhatProfile = () => {
       { title: "Honorable mentioned fast forward presentation award, IDETC, ASME", year: "2015" },
       { title: "Performance award, Kirloskar Oil Engine Ltd. Pune", year: "2011" },
       { title: "Merit awards, NIT Warangal", year: "2006, 2007" },
+    ],
+
+    // Extracted from CV Leadership Table 
+    leadership: [
+      { role: "Faculty-in-charge, Public relation", org: "IIT Hyderabad", year: "2024-27" },
+      { role: "Conference Chair, iNaCoMM 2025", org: "IIT Hyderabad", year: "2024-25" },
+      { role: "Member, Program Committee, Advances in Robotics (AIR)", org: "IIT Jodhpur", year: "2025" },
+      { role: "Member, Technical Committee, ICRAME 2025", org: "IIT Jodhpur, LNMIIT, MNIT", year: "2024-25" },
+      { role: "Member, Technical Committee, INCMDAO 2024", org: "IISc-Bengaluru", year: "2024" },
+      { role: "Member, Technical Committee, NCMDAO 2023", org: "IIT Guwahati", year: "2022" },
+      { role: "Faculty-in-charge, EV Technology online M. Tech Program", org: "IIT Hyderabad", year: "2023-Present" },
+      { role: "Faculty-in-charge, Aeolus Racing team", org: "IIT Hyderabad", year: "2023-Present" },
+      { role: "Faculty-in-charge, MAE Dept. Alumni", org: "IIT Hyderabad", year: "2022-Present" },
+      { role: "Member, Organizing & Technical Committees, SICE 2022", org: "IIT Hyderabad", year: "2022" },
+      { role: "Member, Organizing & Technical Committees, MAMM 2022", org: "IIT Hyderabad", year: "2022" },
+      { role: "Member, Technical Committees, NFEST 2019", org: "NIT Kurukshetra", year: "2019" },
     ],
 
     journals: [
@@ -104,14 +122,13 @@ const PrabhatProfile = () => {
           <Button 
             variant="ghost" 
             onClick={() => navigate(-1)} // Go back history
-            // UPDATED: Added hover:text-orange-600 and hover:bg-orange-50
             className="mb-8 hover:bg-orange-50 hover:text-orange-600 transition-colors"
           >
             <ArrowLeft className="mr-2 h-4 w-4" /> Back to Team
           </Button>
 
           <div className="flex flex-col md:flex-row gap-8 items-start">
-            {/* Profile Image - Large and Clean */}
+            {/* Profile Image */}
             <div className="w-32 h-32 md:w-48 md:h-48 rounded-2xl overflow-hidden border-4 border-background shadow-xl shrink-0 bg-muted">
               <img 
                 src={PROFILE.image} 
@@ -186,7 +203,6 @@ const PrabhatProfile = () => {
                   <Badge 
                     key={i} 
                     variant="secondary" 
-                    // UPDATED: Changed background to light orange and text to dark orange
                     className="px-3 py-1.5 text-sm font-medium bg-orange-50 text-orange-700 hover:bg-orange-100 transition-colors cursor-default border border-orange-100"
                   >
                     {item}
@@ -211,7 +227,7 @@ const PrabhatProfile = () => {
 
           </div>
 
-          {/* RIGHT CONTENT (Bio, Awards, Service) */}
+          {/* RIGHT CONTENT (Bio, Awards, Leadership, Service) */}
           <div className="lg:col-span-2 space-y-12">
             
             {/* Biography */}
@@ -242,6 +258,27 @@ const PrabhatProfile = () => {
                     <div>
                       <div className="font-semibold text-foreground">{award.title}</div>
                     </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* NEW: Leadership & Administrative Roles */}
+            <section>
+              <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                <Users className="h-6 w-6 text-primary" />
+                Leadership (Academic & Administrative)
+              </h2>
+              <div className="grid gap-4">
+                {PROFILE.leadership.map((role, i) => (
+                  <div key={i} className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-lg bg-card border border-border/50 hover:border-primary/40 transition-colors">
+                    <div className="mb-2 sm:mb-0">
+                      <div className="font-semibold text-foreground">{role.role}</div>
+                      <div className="text-sm text-muted-foreground">{role.org}</div>
+                    </div>
+                    <Badge variant="outline" className="w-fit bg-primary/5 text-primary border-primary/20">
+                      {role.year}
+                    </Badge>
                   </div>
                 ))}
               </div>

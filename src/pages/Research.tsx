@@ -6,7 +6,8 @@ import {
   FileText, 
   Mic, 
   Award, 
-  Megaphone 
+  Megaphone,
+  Briefcase
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -15,117 +16,166 @@ import { MeshBackground } from "@/components/MeshBackground";
 
 // --- NEWS DATA ---
 const NEWS_ITEMS = [
+  // --- NEW ITEMS FROM HOME PAGE ---
+  {
+    date: "Dec 18, 2025",
+    title: "Design and Development of Composite Structure for High-Velocity Impact Energy Absorption",
+    description: "We are excited to announce that Prof. Prabhat and Prof. Chandra have been awarded ARG funding for this project from Anusandhan National Research Foundation, New Delhi, India.",
+    category: "Funding",
+    link: "https://anrfonline.in/",
+    featured: true // Featured headline
+  },
+  {
+    date: "Dec 10, 2025",
+    title: "TOCoDE lab presented at iNaCoMM 2025",
+    description: "TOCoDE team presented four papers in iNaCoMM2025 international conference held at IIT Hyderabad.",
+    category: "Talk",
+    link: "#"
+  },
+  {
+    date: "Nov 25, 2025",
+    title: "PyTOaCNN Accepted in Soft Computing Journal",
+    description: "Our work on 'PyTOaCNN: Topology optimization using an adaptive convolutional neural network in Python' has been accepted for publication.",
+    category: "Publication",
+    link: "https://link.springer.com/article/10.1007/s00500-025-10919-y"
+  },
+  {
+    date: "Nov 15, 2025",
+    title: "Workshop on AI & LLMs completed successfully",
+    description: "Conducted a hands-on workshop at IIT Hyderabad connecting brilliant minds in engineering.",
+    category: "Event",
+    link: "#"
+  },
+  {
+    date: "Jun 06, 2025",
+    title: "TOPress3D Accepted in Optimization and Engineering",
+    description: "Our work on 'TOPress3D: 3D topology optimization with design-dependent pressure loads in MATLAB' has been accepted for publication.",
+    category: "Publication",
+    link: "https://link.springer.com/article/10.1007/s11081-024-09931-2",
+    wide: true
+  },
+
+  // --- EXISTING ITEMS (Preserved) ---
   {
     date: "Nov 2024",
     title: "GO-GAN: Geometry Optimization Generative Adversarial Network",
     description: 'Our paper "GO-GAN: Geometry Optimization Generative Adversarial Network for achieving optimized structures with targeted physical properties" is ACCEPTED for presentation in iNCMDAO, December 16-18, IISc Bangalore, India.',
     category: "Presentation",
-    featured: true // Mark as headline
+    link: "#"
   },
   {
     date: "Nov 2024",
     title: "PyTOPress: Python Code for Topology Optimization",
     description: 'Our paper "PyTOPress: Python code for topology optimization of structures subjected to design-dependent pressure loads" is ACCEPTED for presentation in iNCMDAO, December 16-18, IISc Bangalore, India.',
-    category: "Presentation"
+    category: "Presentation",
+    link: "#"
   },
   {
     date: "Nov 2024",
     title: "Topology Optimization of Contact-Aided Compliant Mechanisms",
     description: 'Our paper "Topology optimization of contact-aided compliant mechanisms for tracing multi-kink paths" is ACCEPTED for presentation in iNCMDAO, December 16-18, IISc Bangalore, India.',
-    category: "Presentation"
+    category: "Presentation",
+    link: "#"
   },
   {
     date: "Nov 2024",
     title: "Efficient Support Structure Designs in Additive Manufacturing",
     description: 'Our paper "Topology optimization for efficient support structure designs in Additive Manufacturing" is ACCEPTED for presentation in iNCMDAO, December 16-18, IISc Bangalore, India.',
     category: "Presentation",
-    wide: true // Spans 2 cols
+    link: "#",
+    wide: true
   },
   {
     date: "Nov 2024",
     title: "Design of a Novel Laparoscopic Fan Retractor",
     description: 'Our paper "Design of a Novel Laparoscopic Fan Retractor for En-hanced Surgical Performance" is ACCEPTED for presentation in iNCMDAO, December 16-18, IISc Bangalore, India.',
-    category: "Presentation"
-  },
-  {
-    date: "Sep 2024",
-    title: "TOPress3D Accepted in Optimization and Engineering",
-    description: 'Our paper "TOPress3D: 3D topology optimization with design-dependent pressure loads in MATLAB" has been ACCEPTED for publication in Optimization and Engineering Journal.',
-    category: "Publication"
+    category: "Presentation",
+    link: "#"
   },
   {
     date: "Jan 2024",
     title: "Diversity-Based Topology Optimisation of Soft Robotic Grippers",
     description: 'Our paper "Diversity-based topology optimisation of soft robotic grippers" has been PUBLISHED in Advanced Intelligent Systems Journal.',
     category: "Publication",
+    link: "#", // Add specific link if available
     wide: true
   },
   {
     date: "Jan 2024",
     title: "3D Material Mask Overlay Approach Published",
     description: 'Our paper "Three-Dimensional Material Mask Overlay Topology Optimization Approach With Truncated Octahedron Elements" has been PUBLISHED in Journal of Mechanical Design Journal.',
-    category: "Publication"
+    category: "Publication",
+    link: "#"
   },
   {
     date: "Dec 2023",
     title: "TOaCNN Presentation at NCMDAO",
     description: 'Khaish Singh Chadha from TOCoDE lab presented "TOaCNN: Adaptive Convolutional Neural Network for Multidisciplinary Topology Optimization" in NCMDAO conference, 2023 at IIT Guwahati.',
-    category: "Presentation"
+    category: "Presentation",
+    link: "#"
   },
   {
     date: "Dec 2023",
     title: "PyHexTop Presentation at NCMDAO",
     description: 'Aditi Agarwal from TOCoDE lab presented "PyHexTop: a compact Python code for topology optimization using hexagonal elements" in NCMDAO conference, 2023 at IIT Guwahati.',
-    category: "Presentation"
+    category: "Presentation",
+    link: "#"
   },
   {
     date: "Nov 2023",
     title: "SoRoTop: Hitchhiker's Guide Published",
     description: 'Our paper "SoRoTop: a hitchhiker’s guide to topology optimization MATLAB code for design-dependent pneumatic-driven soft robots" has been PUBLISHED in Optimization and Engineering Journal.',
     category: "Publication",
-    wide: true
+    link: "https://link.springer.com/article/10.1007/s11081-023-09865-1" // Added from context
   },
   {
     date: "July 2023",
     title: "Short Course at BHEL Hyderabad",
     description: 'Prof. Prabhat gave a short course on Topology Optimization and Design for Additive Manufacturing at Bharat Heavy Electricals Limited, Hyderabad with Prof. Gopinath Muvvala.',
-    category: "Talk"
+    category: "Talk",
+    link: "#"
   },
   {
     date: "July 2023",
     title: "International Travel Grant Award",
     description: 'Prof. Prabhat received International Travel Grant from the SERB, India to present "Topology Optimization of Fluidic Pressure-Driven Multi-Material Compliant Mechanisms" paper in ASME IDETC/CIE2023, Boston MA, USA.',
-    category: "Award"
+    category: "Award",
+    link: "#"
   },
   {
     date: "April 2023",
     title: "Paper Accepted for ASME IDETC/CIE2023",
     description: 'Our paper "Topology Optimization of Fluidic Pressure-Driven Multi-Material Compliant Mechanisms" is ACCEPTED for presentation in ASME IDETC/CIE2023, August 20-23, Boston Park Plaza, Boston MA, USA.',
-    category: "Presentation"
+    category: "Presentation",
+    link: "#"
   },
   {
     date: "April 2023",
     title: "TOPress Published",
     description: 'Our paper "TOPress: a MATLAB implementation for topology optimization of structures subjected to design-dependent pressure loads" has been PUBLISHED in Structural and Multidisciplinary Optimization Journal.',
-    category: "Publication"
+    category: "Publication",
+    link: "https://link.springer.com/article/10.1007/s00158-023-03533-9" // Added from context
   },
   {
     date: "April 2023",
     title: "Automated Design of Pneumatic Soft Grippers",
     description: 'Our paper "Automated design of pneumatic soft grippers through design-dependent multi-material topology optimization" has been PUBLISHED in 6th IEEE-RAS International Conference on Soft Robotics (ROBOSOFT), 2023, Singapore.',
-    category: "Publication"
+    category: "Publication",
+    link: "#"
   },
   {
     date: "Dec 2022",
     title: "Invited Talk at SICE 2022",
     description: 'Prof. Prabhat delivered an invited talk on "Topology optimization of pressure-loaded multimaterial structures" in SICE 2022 at IIT-Hyderabad.',
-    category: "Talk"
+    category: "Talk",
+    link: "#"
   },
   {
     date: "Dec 2022",
     title: "Invited Talk at MAMM 2022",
     description: 'Prof. Prabhat delivered an invited talk on "Towards topology optimization of pressure-driven soft robots" in MAMM 2022 at IIT-Hyderabad.',
-    category: "Talk"
+    category: "Talk",
+    link: "#"
   }
 ];
 
@@ -137,6 +187,8 @@ const News = () => {
       case "Presentation": return "bg-purple-50 text-purple-700 border-purple-200";
       case "Talk": return "bg-green-50 text-green-700 border-green-200";
       case "Award": return "bg-amber-50 text-amber-700 border-amber-200";
+      case "Funding": return "bg-emerald-50 text-emerald-700 border-emerald-200";
+      case "Event": return "bg-indigo-50 text-indigo-700 border-indigo-200";
       default: return "bg-gray-50 text-gray-700 border-gray-200";
     }
   };
@@ -147,6 +199,7 @@ const News = () => {
       case "Presentation": return <Presentation className="h-4 w-4" />;
       case "Talk": return <Mic className="h-4 w-4" />;
       case "Award": return <Award className="h-4 w-4" />;
+      case "Funding": return <Briefcase className="h-4 w-4" />;
       default: return <Megaphone className="h-4 w-4" />;
     }
   };
@@ -181,14 +234,14 @@ const News = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
             
             {NEWS_ITEMS.map((item, index) => {
-              // Determine grid span based on item properties to create "shuffled" look
+              // Determine grid span based on item properties
               const isFeatured = item.featured;
               const isWide = item.wide;
               
               // Dynamic Class Logic
-              let gridClass = "col-span-1"; // Default
-              if (isFeatured) gridClass = "md:col-span-2 lg:col-span-2 row-span-2"; // Headline Story
-              else if (isWide) gridClass = "md:col-span-2"; // Wide Story
+              let gridClass = "col-span-1"; 
+              if (isFeatured) gridClass = "md:col-span-2 lg:col-span-2 row-span-2"; 
+              else if (isWide) gridClass = "md:col-span-2"; 
 
               return (
                 <Card 
@@ -199,7 +252,13 @@ const News = () => {
                     ${isFeatured ? "bg-gradient-to-br from-white to-orange-50 border-orange-200" : "bg-white"}
                   `}
                 >
-                  <div className="p-6 md:p-8 flex flex-col h-full">
+                  {/* WRAPPER ANCHOR TAG FOR CLICKABILITY */}
+                  <a 
+                    href={item.link || "#"} 
+                    target={item.link && item.link !== "#" ? "_blank" : "_self"}
+                    rel="noopener noreferrer"
+                    className="flex flex-col h-full p-6 md:p-8 no-underline"
+                  >
                     
                     {/* Header: Date & Badge */}
                     <div className="flex justify-between items-start mb-4">
@@ -237,7 +296,7 @@ const News = () => {
                     {isFeatured && (
                         <div className="absolute top-0 right-0 w-32 h-32 bg-orange-200/20 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
                     )}
-                  </div>
+                  </a>
                 </Card>
               );
             })}

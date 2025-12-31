@@ -14,7 +14,8 @@ import {
   ChevronRight,
   Download,
   BookOpen,
-  Atom 
+  Atom,
+  ExternalLink
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -28,12 +29,15 @@ interface NewsItem {
   category: string;
   title: string;
   description: string;
+  link?: string; 
 }
 
 interface SoftwareItem {
   title: string;
-  link: string;
-  citation: string;
+  link: string; 
+  paperLink: string; 
+  authors: string; 
+  citationDetails: string;
 }
 
 interface PaperLink {
@@ -123,32 +127,44 @@ const SOFTWARE_ITEMS: SoftwareItem[] = [
   {
     title: "HoneyTop90",
     link: "https://github.com/PrabhatIn/HoneyTop90",
-    citation: "P. Kumar (2023): HoneyTop90: A 90-line MATLAB code for topology optimization using honeycomb tessellation, Optimization and Engineering 24 (2), 1433-1460"
+    paperLink: "https://link.springer.com/article/10.1007/s11081-022-09715-6",
+    authors: "P. Kumar (2023)",
+    citationDetails: "HoneyTop90: A 90-line MATLAB code for topology optimization using honeycomb tessellation, Optimization and Engineering 24 (2), 1433-1460"
   },
   {
     title: "TOPress",
     link: "https://github.com/PrabhatIn/TOPress",
-    citation: "P. Kumar (2023): TOPress: a MATLAB implementation for topology optimization of structures subjected to design-dependent pressure loads, Structural and Multidisciplinary Optimization volume 66, Article number: 97 (2023)"
+    paperLink: "https://link.springer.com/article/10.1007/s00158-023-03533-9",
+    authors: "P. Kumar (2023)",
+    citationDetails: "TOPress: a MATLAB implementation for topology optimization of structures subjected to design-dependent pressure loads, Structural and Multidisciplinary Optimization volume 66, Article number: 97 (2023)"
   },
   {
     title: "SoRoTop",
     link: "https://github.com/PrabhatIn/SoRoTop",
-    citation: "P. Kumar (2024): SoRoTop: a hitchhiker's guide to topology optimization MATLAB code for design-dependent pneumatic-driven soft robots, Optimization and Engineering 25 (4), 2473–2507"
+    paperLink: "https://link.springer.com/article/10.1007/s11081-023-09865-1",
+    authors: "P. Kumar (2024)",
+    citationDetails: "SoRoTop: a hitchhiker's guide to topology optimization MATLAB code for design-dependent pneumatic-driven soft robots, Optimization and Engineering 25 (4), 2473–2507"
   },
   {
     title: "TOPress3D",
     link: "https://github.com/PrabhatIn/TOPress3D",
-    citation: "P. Kumar (2025): TOPress3D: 3D topology optimization with design-dependent pressure loads in MATLAB, Optimization and Engineering 26(3), 1113-1141"
+    paperLink: "https://link.springer.com/article/10.1007/s11081-024-09931-2",
+    authors: "P. Kumar (2025)",
+    citationDetails: "TOPress3D: 3D topology optimization with design-dependent pressure loads in MATLAB, Optimization and Engineering 26(3), 1113-1141"
   },
   {
     title: "PyHexTop",
     link: "https://github.com/PrabhatIn/PyHexTop",
-    citation: "A. Agarwal, A. Saxena, P. Kumar (2023): PyHexTop: a compact Python code for topology optimization using hexagonal elements, Advances in Multidisciplinary Design, Analysis and Optimization"
+    paperLink: "https://arxiv.org/abs/2310.01968",
+    authors: "A. Agarwal, A. Saxena, P. Kumar (2023)",
+    citationDetails: "PyHexTop: a compact Python code for topology optimization using hexagonal elements, Advances in Multidisciplinary Design, Analysis and Optimization"
   },
   {
     title: "PyTOPress",
     link: "mailto:pkumar@mae.iith.ac.in",
-    citation: "S. Saxena, SI Sarkar, P. Kumar (2024): PyTOPress: Python code for topology optimization with design-dependent pressure loads"
+    paperLink: "https://arxiv.org/abs/2410.22131",
+    authors: "S. Saxena, SI Sarkar, P. Kumar (2024)",
+    citationDetails: "PyTOPress: Python code for topology optimization with design-dependent pressure loads"
   }
 ];
 
@@ -175,31 +191,36 @@ const NEWS_ITEMS: NewsItem[] = [
     date: "Dec 18, 2025",
     category: "Funding",
     title: "Design and Development of Composite Structure for High-Velocity Impact Energy Absorption and Dissipation using Multiscale Topology Optimization",
-    description: "We are excited to announce that Prof. Prabhat and Prof. Chandra have been awarded ARG funding for above-mentioned project from Anusandhan National Research Foundation, New Delhi, India"
+    description: "We are excited to announce that Prof. Prabhat and Prof. Chandra have been awarded ARG funding for above-mentioned project from Anusandhan National Research Foundation, New Delhi, India",
+    link: "https://anrfonline.in/" 
   },
   {
     date: "Nov 25, 2025",
     category: "Publication",
     title: "New paper accepted in Soft Computing Journal",
-    description: "Our work on 'PyTOaCNN: Topology optimization using an adaptive convolutional neural network in Python' has been accepted for publication."
+    description: "Our work on 'PyTOaCNN: Topology optimization using an adaptive convolutional neural network in Python' has been accepted for publication.",
+    link: "https://link.springer.com/article/10.1007/s00500-025-10919-y"
   },
   {
     date: "Jun 06, 2025",
     category: "Publication",
     title: "New paper accepted in Optimization and Engineering Journal",
-    description: "Our work on 'TOPress3D: 3D topology optimization with design-dependent pressure loads in MATLAB' has been accepted for publication."
+    description: "Our work on 'TOPress3D: 3D topology optimization with design-dependent pressure loads in MATLAB' has been accepted for publication.",
+    link: "https://link.springer.com/article/10.1007/s11081-024-09931-2"
   },
   {
     date: "Nov 15, 2025",
     category: "Event",
     title: "Workshop on AI & LLMs completed successfully",
-    description: "Conducted a hands-on workshop at IIT Hyderabad connecting brilliant minds in engineering."
+    description: "Conducted a hands-on workshop at IIT Hyderabad connecting brilliant minds in engineering.",
+    link: "#" 
   },
   {
     date: "Dec 10, 2025",
     category: "Talk",
     title: "TOCoDE lab presented at iNaCoMM 2025",
-    description: "TOCoDE team presented four papers in iNaCoMM2025 international conference held at IIT Hyderabad"
+    description: "TOCoDE team presented four papers in iNaCoMM2025 international conference held at IIT Hyderabad",
+    link: "#" 
   }
 ];
 
@@ -248,31 +269,18 @@ const Home = () => {
               </div>
             </div>
             
-            {/* Title Centered */}
-            <h1 className="text-lg md:text-2xl font-bold leading-tight text-foreground/90 whitespace-nowrap overflow-hidden text-ellipsis mb-4">
+            {/* Title Centered & Colored */}
+            <h1 className="text-lg md:text-2xl font-bold leading-tight whitespace-nowrap overflow-hidden text-ellipsis mb-4">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-red-600 to-orange-600 mr-2">
                 Topology Optimization
               </span>
-              Computational Design & Experimentation Lab
+              {/* UPDATED: Applied same gradient class here */}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-red-600 to-orange-600">
+                Computational Design & Experimentation Lab
+              </span>
             </h1>
 
-            {/* MOVED: Research Areas Grid */}
-            <div className="flex flex-wrap justify-center gap-3 mb-6 max-w-4xl mx-auto">
-                {[
-                  "Multi-disciplinary/-scale Topology Optimization",
-                  "Structural Optimization",
-                  "Soft Robotics",
-                  "Data(AI/ML)-Driven Design",
-                  "Compliant Mechanisms",
-                  "Inverse Design",
-                  "Computational Contact Mechanics",
-                  "Computational Mechanics"
-                ].map((area, idx) => (
-                  <span key={idx} className="px-3 py-1.5 bg-white/80 backdrop-blur-sm border border-orange-100 rounded-full text-orange-700 text-xs md:text-sm font-medium shadow-sm hover:shadow-md hover:border-orange-300 transition-all cursor-default">
-                    {area}
-                  </span>
-                ))}
-            </div>
+            {/* REMOVED: Research Areas Grid */}
           </div>
 
           {/* --- PHYSICS DESIGN BOUNDARY LINE --- */}
@@ -351,7 +359,6 @@ const Home = () => {
              </div>
           </div>
           
-          {/* 3. WELCOME TEXT SECTION (Modified) */}
         </div>
 
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce text-muted-foreground/50 hidden md:block">
@@ -403,7 +410,13 @@ const Home = () => {
 
                         <div className="animate-vertical-scroll p-4 space-y-4">
                             {[...NEWS_ITEMS, ...NEWS_ITEMS, ...NEWS_ITEMS].map((news, i) => (
-                                <div key={i} className="p-4 rounded-xl bg-white border border-border/50 hover:border-red-400 hover:shadow-md transition-all duration-300 cursor-pointer group">
+                                <a 
+                                    key={i} 
+                                    href={news.link} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="block p-4 rounded-xl bg-white border border-border/50 hover:border-red-400 hover:shadow-md transition-all duration-300 cursor-pointer group no-underline"
+                                >
                                     <div className="flex justify-between items-start mb-2">
                                         <Badge variant="secondary" className="text-xs font-normal">{news.category}</Badge>
                                         <span className="text-xs text-muted-foreground flex items-center">
@@ -417,7 +430,7 @@ const Home = () => {
                                     <p className="text-xs text-muted-foreground mt-1 line-clamp-2">
                                             {news.description}
                                     </p>
-                                </div>
+                                </a>
                             ))}
                         </div>
                     </div>
@@ -445,15 +458,22 @@ const Home = () => {
                                         <h4 className="font-bold text-sm text-foreground group-hover:text-blue-600 transition-colors">
                                             {soft.title}
                                         </h4>
-                                        <a href={soft.link} target="_blank" rel="noopener noreferrer" className="text-xs flex items-center text-blue-600 hover:underline">
-                                            <Download className="h-3 w-3 mr-1" />
-                                            Download
-                                        </a>
+                                        <div className="flex gap-2">
+                                            <a href={soft.paperLink} target="_blank" rel="noopener noreferrer" className="text-xs flex items-center text-amber-600 hover:underline">
+                                                <ExternalLink className="h-3 w-3 mr-1" />
+                                                View Paper
+                                            </a>
+                                            <a href={soft.link} target="_blank" rel="noopener noreferrer" className="text-xs flex items-center text-blue-600 hover:underline">
+                                                <Download className="h-3 w-3 mr-1" />
+                                                Download
+                                            </a>
+                                        </div>
                                     </div>
                                     <div className="text-xs text-muted-foreground mt-2 flex gap-2">
                                         <BookOpen className="h-4 w-4 shrink-0 mt-0.5" />
                                         <p className="italic leading-relaxed">
-                                            "{soft.citation}"
+                                            <span className="text-amber-700 font-semibold">{soft.authors}: </span>
+                                            {soft.citationDetails}
                                         </p>
                                     </div>
                                 </div>
@@ -510,7 +530,7 @@ const Home = () => {
             <p className="text-lg text-muted-foreground">We're always looking for talented researchers and students passionate about computational design and optimization.</p>
             <div className="pt-4">
               <Button variant="outline" className="rounded-full px-8 h-12 bg-background/50 backdrop-blur-sm">
-                Contact Lab <MousePointer2 className="ml-2 h-4 w-4" />
+                Email at pkumar@mae.iith.ac.in <MousePointer2 className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
