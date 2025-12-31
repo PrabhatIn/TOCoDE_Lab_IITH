@@ -24,13 +24,15 @@ const Team = () => {
     email: "pkumar@mae.iith.ac.in", 
     image: "/Images/Team/prabhat-kumar.png", 
     bio: "Leading the research group in topology optimization and computational mechanics.",
-    interests: [
+     interests: [
       "Topology Optimization",
       "Structural Optimization",
+      "Soft Robotics",
+      "Data (AI/ML)-Driven Design",
       "Compliant Mechanisms",
-      "Inverse Problems",
-      "Computational Contact Mechanics",
-      "AI/ML",
+      "Inverse Design",
+      "Computational Mechanics",
+      "Computational Contact Mechanics"
     ],
     address: [
       "Room: C-610, Academic Block C",
