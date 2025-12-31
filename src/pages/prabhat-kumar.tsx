@@ -33,8 +33,8 @@ const PrabhatProfile = () => {
     
     // Bio split for readability
     bio: [
-      "I am an Assistant Professor in the Department of Mechanical and Aerospace Engineering at the Indian Institute of Technology Hyderabad. I completed my Bachelor's and Ph.D. in Mechanical Engineering at NIT Warangal and IIT Kanpur respectively. In my Ph.D., I investigated topology optimization of contact-aided compliant mechanisms.",
-      "Thereafter, I worked as a post-doctoral fellow at TU Delft with Prof. Matthijs Langelaar, at Denmark Technical University with Prof. Ole Sigmund, and at Technion-IIT Israel with Prof. Oded Amir and Prof. Gal Shmuel. I was a Ramanujan fellow faculty at Mechanical Engineering Dept, IISc, Bangalore before joining IIT-H."
+      "I am an Assistant Professor in the Department of Mechanical and Aerospace Engineering at the Indian Institute of Technology Hyderabad. I completed my Bachelor's and Ph.D. in Mechanical Engineering at NIT Warangal and IIT Kanpur respectively.",
+      "I held post-doctoral positions at TU Delft with Prof. Matthijs Langelaar, at Denmark Technical University with Prof. Ole Sigmund, and at Technion-IIT Israel with Prof. Oded Amir and Prof. Gal Shmuel. And, I was a Ramanujan fellow faculty at Mechanical Engineering Dept, IISc, Bangalore."
     ],
 
     education: [
