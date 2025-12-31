@@ -274,13 +274,28 @@ const Home = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-red-600 to-orange-600 mr-2">
                 Topology Optimization
               </span>
-              {/* UPDATED: Applied same gradient class here */}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-red-600 to-orange-600">
                 Computational Design & Experimentation Lab
               </span>
             </h1>
 
-            {/* REMOVED: Research Areas Grid */}
+            {/* RESTORED: Research Areas Grid (Small Tags) */}
+            <div className="flex flex-wrap justify-center gap-2 mb-6 max-w-5xl mx-auto">
+                {[
+                  "Multi-disciplinary/-scale Topology Optimization",
+                  "Structural Optimization",
+                  "Soft Robotics",
+                  "Data(AI/ML)-Driven Design",
+                  "Compliant Mechanisms",
+                  "Inverse Design",
+                  "Computational Contact Mechanics",
+                  "Computational Mechanics"
+                ].map((area, idx) => (
+                  <span key={idx} className="px-2.5 py-1 bg-white/60 backdrop-blur-md border border-orange-100/50 rounded-full text-orange-800 text-[10px] md:text-xs font-medium shadow-sm hover:shadow hover:bg-white/80 transition-all cursor-default">
+                    {area}
+                  </span>
+                ))}
+            </div>
           </div>
 
           {/* --- PHYSICS DESIGN BOUNDARY LINE --- */}
