@@ -69,9 +69,9 @@ const Team = () => {
   // PASSED OUT STUDENTS
   const passedOutStudents = [
     // M.Tech
-    { name: "Duru Bhargav Kumar", role: "M.Tech", company: "Aerospace Dynamics Ltd." },
-    { name: "Aishwarya Desai", role: "M.Tech", company: "Skyroot Aerospace" },
-    { name: "Amal Shaji", role: "M.Tech", company: "Boeing India" },
+    { name: "Duru Bhargav Kumar", role: "M.Tech", company: "-" },
+    { name: "Aishwarya Desai", role: "M.Tech", company: "-" },
+    { name: "Amal Shaji", role: "M.Tech", company: "-" },
     
     // B.Tech
     { name: "Shriram Hari", role: "B.Tech", company: "-" },
