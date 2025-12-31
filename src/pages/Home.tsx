@@ -259,7 +259,7 @@ const Home = () => {
             {/* MOVED: Research Areas Grid */}
             <div className="flex flex-wrap justify-center gap-3 mb-6 max-w-4xl mx-auto">
                 {[
-                  "Multi-disciplinary/-physics/-scale Topology Optimization",
+                  "Multi-disciplinary/-scale Topology Optimization",
                   "Structural Optimization",
                   "Soft Robotics",
                   "Data(AI/ML)-Driven Design",
