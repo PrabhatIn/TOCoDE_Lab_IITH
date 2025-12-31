@@ -262,9 +262,9 @@ const Home = () => {
                   "Multi-disciplinary/-physics/-scale Topology Optimization",
                   "Structural Optimization",
                   "Soft Robotics",
-                  "Data (AI/ML)-Driven Design",
+                  "Data(AI/ML)-Driven Design",
                   "Compliant Mechanisms",
-                  "Inverse Design Problems",
+                  "Inverse Design",
                   "Computational Contact Mechanics",
                   "Computational Mechanics"
                 ].map((area, idx) => (
