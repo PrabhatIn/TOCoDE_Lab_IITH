@@ -27,7 +27,7 @@ const PrabhatProfile = () => {
     role: "Assistant Professor",
     department: "Department of Mechanical and Aerospace Engineering",
     university: "Indian Institute of Technology Hyderabad",
-    email: "prabhat@mae.iith.ac.in", 
+    email: "pkumar@mae.iith.ac.in", 
     location: "IIT Hyderabad, Kandi, Sangareddy - 502284",
     image: "/Images/Team/prabhat-kumar.png", 
     
