@@ -259,13 +259,14 @@ const Home = () => {
             {/* MOVED: Research Areas Grid */}
             <div className="flex flex-wrap justify-center gap-3 mb-6 max-w-4xl mx-auto">
                 {[
-                  "Multi-disciplinary/-physics/-scale topology optimization",
-                  "Soft robotics",
-                  "Data (AI/ML)-driven Design",
-                  "Compliant mechanisms",
-                  "Inverse design problems",
-                  "Computational contact mechanics",
-                  "Computational mechanics"
+                  "Multi-disciplinary/-physics/-scale Topology Optimization",
+                  "Structural Optimization",
+                  "Soft Robotics",
+                  "Data (AI/ML)-Driven Design",
+                  "Compliant Mechanisms",
+                  "Inverse Design Problems",
+                  "Computational Contact Mechanics",
+                  "Computational Mechanics"
                 ].map((area, idx) => (
                   <span key={idx} className="px-3 py-1.5 bg-white/80 backdrop-blur-sm border border-orange-100 rounded-full text-orange-700 text-xs md:text-sm font-medium shadow-sm hover:shadow-md hover:border-orange-300 transition-all cursor-default">
                     {area}
