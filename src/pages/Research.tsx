@@ -166,7 +166,7 @@ const News = () => {
                 </span>
             </div>
             <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-foreground font-serif">
-              ToCoDE <span className="text-primary">Times</span>
+              TOCoDE <span className="text-primary">Times</span>
             </h1>
             <div className="mt-4 flex justify-center gap-4 text-sm text-muted-foreground font-medium">
                 <span>Est. IIT Hyderabad</span>

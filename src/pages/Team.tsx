@@ -74,13 +74,8 @@ const Team = () => {
     { name: "Amal Shaji", role: "M.Tech", company: "Boeing India" },
     
     // B.Tech
-    { name: "Shriram Hari", role: "B.Tech", company: "Airbus" },
-    { name: "Alapati Gurumurari", role: "B.Tech", company: "ISRO" },
-    { name: "Alavalapati Hansika Reddy", role: "B.Tech", company: "General Electric" },
-    { name: "Puran Kaul", role: "B.Tech", company: "Collins Aerospace" },
-    { name: "Sadhika Singh", role: "B.Tech", company: "Dhruva Space" },
-    { name: "Gaurav Yadav", role: "B.Tech", company: "HAL" },
-    { name: "Gunna Trishna", role: "B.Tech", company: "Mercedes-Benz R&D" },
+    { name: "Shriram Hari", role: "B.Tech", company: "-" },
+    { name: "Gunna Trishna", role: "B.Tech", company: "-" },
   ];
 
   // Handler for clicking the PI Card
