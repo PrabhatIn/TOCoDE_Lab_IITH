@@ -69,11 +69,13 @@ const PrabhatProfile = () => {
     journals: [
       "International Journal for Numerical Methods in Engineering",
       "Structural and Multidisciplinary Optimization Journal",
+      "Computer Methods in Applied Mechanics and Engineering",
       "Engineering with Computers",
       "npj Artificial Intelligence - Nature",
       "Journal of The Royal Society Interface",
       "Journal of Mechanical Design",
       "Journal of Mechanisms and Robotics",
+      "Finite Elements in Analysis & Design",
       "Mechanism and Machine Theory Journal",
       "Journal of Computational Design and Engineering",
       "Applied Mathematical Modelling Journal",
@@ -87,10 +89,7 @@ const PrabhatProfile = () => {
       "Materials Today: Proceedings",
       "Micromachines",
       "Materials & Design",
-      // NEW ADDITIONS BELOW
-      "Finite Elements in Analysis & Design",
-      "Advanced Robotics Research",
-      "Computer Methods in Applied Mechanics and Engineering"
+      "Advanced Robotics Research"
     ]
   };
 
