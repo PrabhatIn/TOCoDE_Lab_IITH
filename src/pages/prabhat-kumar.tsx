@@ -45,12 +45,11 @@ const PrabhatProfile = () => {
     interests: [
       "Topology Optimization",
       "Structural Optimization",
+      "Soft Robotics",
+      "Data (AI/ML)-driven Design",
       "Compliant Mechanisms",
       "Inverse Design",
-      "Soft Robotics",
       "Computational Mechanics",
-      "Computer Methods in Applied Mechanics and Engineering",
-      "Advanced Robotics Research",
       "Computational Contact Mechanics"
     ],
 
