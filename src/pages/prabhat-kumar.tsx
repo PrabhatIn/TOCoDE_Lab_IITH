@@ -46,7 +46,7 @@ const PrabhatProfile = () => {
       "Topology Optimization",
       "Structural Optimization",
       "Soft Robotics",
-      "Data (AI/ML)-driven Design",
+      "Data (AI/ML)-Driven Design",
       "Compliant Mechanisms",
       "Inverse Design",
       "Computational Mechanics",
