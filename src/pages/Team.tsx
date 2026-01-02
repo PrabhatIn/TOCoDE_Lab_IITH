@@ -24,7 +24,7 @@ const Team = () => {
     email: "pkumar@mae.iith.ac.in", 
     image: "/Images/Team/prabhat-kumar.png", 
     bio: "Leading the research group in topology optimization and computational mechanics.",
-     interests: [
+    interests: [
       "Topology Optimization",
       "Structural Optimization",
       "Soft Robotics",
@@ -271,14 +271,15 @@ const StudentGroup = ({ title, icon: Icon, students }: { title: string, icon: an
   </div>
 );
 
-// Minimalist Student Card
+// Minimalist Student Card - UPDATED: Removed grayscale effect
 const StudentCard = ({ student }: { student: { name: string; role: string; image: string } }) => (
   <div className="group relative flex flex-col bg-card border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-md">
     <div className="aspect-[4/5] w-full bg-muted overflow-hidden relative">
       <img 
         src={student.image} 
         alt={student.name}
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 grayscale group-hover:grayscale-0"
+        // Removed grayscale classes
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         loading="lazy"
         onError={(e) => {
           e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(student.name)}&background=random&color=fff`; 

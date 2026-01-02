@@ -6,7 +6,6 @@ import logo from "@/assets/tocode-logo.png";
 
 const navItems = [
   { name: "Home", path: "/" },
-  { name: "Projects", path: "/projects" },
   { name: "Publications", path: "/publications" },
   { name: "Team", path: "/team" },
   { name: "Software", path: "/software" },
