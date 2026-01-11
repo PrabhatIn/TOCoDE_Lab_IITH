@@ -9,6 +9,29 @@ const Research = () => {
       category: "Journal Publications",
       icon: FileText,
       years: [
+                {
+          year: "2024",
+          items: [
+            {
+              title: "Diversity‐Based Topology Optimization of Soft Robotic Grippers",
+              authors: "J Pinskier, X Wang, L Liow, Y Xie, P Kumar, M Langelaar, D Howard",
+              venue: "Advanced Intelligent Systems, 2300505",
+              link: "https://onlinelibrary.wiley.com/doi/full/10.1002/aisy.202300505"
+            },
+            {
+              title: "SoRoTop: a hitchhiker's guide to topology optimization MATLAB code for design-dependent pneumatic-driven soft robots",
+              authors: "P. Kumar",
+              venue: "Optimization and Engineering",
+              link: "https://link.springer.com/article/10.1007/s11081-022-09715-6"
+            },
+            {
+              title: "Three-Dimensional Material Mask Overlay Topology Optimization Approach With Truncated Octahedron Elements",
+              authors: "N Singh, P Kumar, A Saxena",
+              venue: "Journal of Mechanical Design 146 (1)",
+              link: "https://asmedigitalcollection.asme.org/mechanicaldesign/article-abstract/146/1/011701/1166682/Three-Dimensional-Material-Mask-Overlay-Topology?redirectedFrom=fulltext"
+            }
+          ]
+        },
         {
           year: "2024",
           items: [
