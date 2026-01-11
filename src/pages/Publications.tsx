@@ -19,6 +19,12 @@ const Research = () => {
               link: "https://onlinelibrary.wiley.com/doi/full/10.1002/aisy.202300505"
             },
             {
+              title: "SoRoTop: a hitchhiker's guide to topology optimization MATLAB code for design-dependent pneumatic-driven soft robots",
+              authors: "P. Kumar",
+              venue: "Optimization and Engineering",
+              link: "https://link.springer.com/article/10.1007/s11081-022-09715-6"
+            },
+            {
               title: "Three-Dimensional Material Mask Overlay Topology Optimization Approach With Truncated Octahedron Elements",
               authors: "N Singh, P Kumar, A Saxena",
               venue: "Journal of Mechanical Design 146 (1)",
@@ -29,12 +35,6 @@ const Research = () => {
         {
           year: "2023",
           items: [
-            {
-              title: "SoRoTop: a hitchhiker's guide to topology optimization MATLAB code for design-dependent pneumatic-driven soft robots",
-              authors: "P. Kumar",
-              venue: "Optimization and Engineering",
-              link: "https://link.springer.com/article/10.1007/s11081-022-09715-6"
-            },
             {
               title: "TOPress: a MATLAB implementation for topology optimization of structures subjected to design-dependent pressure loads",
               authors: "P. Kumar",
