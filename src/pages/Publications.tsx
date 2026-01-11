@@ -10,25 +10,25 @@ const Research = () => {
       icon: FileText,
       years: [
                 {
-          year: "2024",
+          year: "2025",
           items: [
             {
-              title: "Diversity‐Based Topology Optimization of Soft Robotic Grippers",
-              authors: "J Pinskier, X Wang, L Liow, Y Xie, P Kumar, M Langelaar, D Howard",
-              venue: "Advanced Intelligent Systems, 2300505",
-              link: "https://onlinelibrary.wiley.com/doi/full/10.1002/aisy.202300505"
+              title: "Topology Optimization With Quadrilateral Elements: A Comparative Study, Codes, and Tutorials",
+              authors: " SI Sarkar, P Kumar",
+              venue: "Computer Applications in Engineering Education",
+              link: "https://onlinelibrary.wiley.com/doi/abs/10.1002/cae.70031"
             },
             {
-              title: "SoRoTop: a hitchhiker's guide to topology optimization MATLAB code for design-dependent pneumatic-driven soft robots",
-              authors: "P. Kumar",
-              venue: "Optimization and Engineering",
-              link: "https://link.springer.com/article/10.1007/s11081-022-09715-6"
-            },
-            {
-              title: "Three-Dimensional Material Mask Overlay Topology Optimization Approach With Truncated Octahedron Elements",
+              title: "Normalized field product approach: A parameter-free density evaluation method for close-to-binary solutions in topology optimization with embedded length scale",
               authors: "N Singh, P Kumar, A Saxena",
-              venue: "Journal of Mechanical Design 146 (1)",
-              link: "https://asmedigitalcollection.asme.org/mechanicaldesign/article-abstract/146/1/011701/1166682/Three-Dimensional-Material-Mask-Overlay-Topology?redirectedFrom=fulltext"
+              venue: "International Journal for Numerical Methods in Engineering",
+              link: "https://onlinelibrary.wiley.com/doi/abs/10.1002/nme.7673"
+            },
+            {
+              title: "TOPress3D: 3D topology optimization with design-dependent pressure loads in MATLAB",
+              authors: "P Kumar",
+              venue: "Optimization and Engineering",
+              link: "https://link.springer.com/article/10.1007/s11081-024-09931-2"
             }
           ]
         },
