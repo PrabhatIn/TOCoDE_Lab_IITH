@@ -55,40 +55,12 @@ const Contact = () => {
               <Card className="p-6">
                 <div className="flex items-start gap-4">
                   <div className="h-12 w-12 rounded-lg gradient-primary flex items-center justify-center flex-shrink-0">
-                    <Mail className="h-6 w-6 text-primary-foreground" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-foreground mb-2">Lab Email</h3>
-                    <a href="mailto:lab@iith.ac.in" className="text-primary hover:underline">
-                      lab@iith.ac.in
-                    </a>
-                  </div>
-                </div>
-              </Card>
-
-              <Card className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="h-12 w-12 rounded-lg gradient-primary flex items-center justify-center flex-shrink-0">
-                    <Phone className="h-6 w-6 text-primary-foreground" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-foreground mb-2">Phone</h3>
-                    <a href="tel:+91XXXXXXXXXX" className="text-primary hover:underline">
-                      +91 XXX XXX XXXX
-                    </a>
-                  </div>
-                </div>
-              </Card>
-
-              <Card className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="h-12 w-12 rounded-lg gradient-primary flex items-center justify-center flex-shrink-0">
                     <Globe className="h-6 w-6 text-primary-foreground" />
                   </div>
                   <div>
                     <h3 className="font-bold text-foreground mb-2">Website</h3>
-                    <a href="https://iith.ac.in" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
-                      www.iith.ac.in
+                    <a href="https://tocode.mae.iith.ac.in" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+                      https://tocode.mae.iith.ac.in
                     </a>
                   </div>
                 </div>
@@ -98,19 +70,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6 text-foreground">Visit Our Lab</h2>
-            <p className="text-muted-foreground mb-8">
-              We welcome visitors, collaborators, and prospective students. Please contact us to schedule a visit.
-            </p>
-            <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-              <p className="text-muted-foreground">Map placeholder - IIT Hyderabad Campus</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </div>
   );
 };

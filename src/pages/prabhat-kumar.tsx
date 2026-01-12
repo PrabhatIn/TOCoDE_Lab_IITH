@@ -8,13 +8,27 @@ import {
   Globe, 
   ArrowLeft,
   Briefcase,
-  Users // Added for Leadership section
+  Users,
+  Github // Imported Github
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MeshBackground } from "@/components/MeshBackground";
 import { useNavigate } from "react-router-dom";
+
+// Simple SVG Icons for academic platforms
+const ResearchGateIcon = ({ className }: { className?: string }) => (
+  <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className={className} fill="currentColor"><path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.91-1.215 1.606-.12.32-.17.638-.167 1.25.006.918 0 1.956 0 1.956l-3.32-1.996c-1.465-.92-2.31-1.222-3.562-1.222-2.22 0-3.928 1.14-4.82 3.125-.43.955-.562 1.836-.39 2.628.18.82 1.767 4.09 1.767 4.09l-1.63 1.03c-.933.585-1.393 1.09-1.393 1.92 0 .895.535 1.543 1.573 2.213 1.298.835 2.553 1.26 3.996 1.26 1.432 0 2.59-.446 3.32-1.127.76-.713 1.137-1.666 1.137-2.85 0-1.12-.497-2.196-1.336-3.11l-.22-.224c-.23-.235-.11-.325.28-.59.73-.497 2.21-1.21 2.38-1.25.13-.03.3-.06.51-.06.9 0 1.55.285 2.03.882.35.435.53.99.53 1.67 0 .58-.2 1.353-.615 2.12-.4.743-1.076 1.56-1.925 2.443-.13.136-.2.27-.2.4 0 .15.08.31.24.475.29.3.82.72 1.18.915.22.12.63.185.92.185.73 0 1.52-.375 2.22-1.03 1.27-1.18 2.39-3.23 2.92-5.46.25-1.03.37-2.07.37-3.07 0-2.35-.93-4.22-2.61-5.35C21.43.37 20.59 0 19.585 0zM7.7 6.36c.6.005 1.08.15 1.47.46.43.34.72.82.83 1.42.06.33.02.82-.1 1.28-.2.72-1.28 2.5-1.64 2.65-.11.045-.25.07-.41.07-.63 0-1.15-.17-1.53-.51-.43-.38-.68-.89-.72-1.52-.03-.43.07-.93.28-1.39.38-.85 1.13-1.4 1.82-1.46z"/></svg>
+);
+
+const OrcidIcon = ({ className }: { className?: string }) => (
+  <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className={className} fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.948.948 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.306v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg>
+);
+
+const GoogleScholarIcon = ({ className }: { className?: string }) => (
+  <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className={className} fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+);
 
 const PrabhatProfile = () => {
   const navigate = useNavigate();
@@ -30,7 +44,15 @@ const PrabhatProfile = () => {
     university: "Indian Institute of Technology Hyderabad",
     email: "pkumar@mae.iith.ac.in", 
     location: "IIT Hyderabad, Kandi, Sangareddy - 502284",
-    image: "/Images/Team/prabhat-kumar.png", 
+    image: "/Images/Team/prabhat-kumar.png",
+    
+    // Add your links here
+    socials: {
+      researchGate: "https://www.researchgate.net/profile/Prabhat-Kumar-34", 
+      orcid: "https://orcid.org/0000-0001-6812-9861",
+      github: "https://github.com/PrabhatIn",
+      googleScholar: "https://scholar.google.co.in/citations?user=sMc1rB0AAAAJ&hl=en"
+    },
     
     // Bio split for readability
     bio: [
@@ -43,12 +65,11 @@ const PrabhatProfile = () => {
       { degree: "B.Tech Mechanical Engineering", school: "NIT Warangal" },
     ],
 
-    // Updated to match Home Page order exactly
     interests: [
       "Multi-disciplinary/-scale Topology Optimization",
       "Structural Optimization",
       "Soft Robotics",
-      "Data (AI/ML)-Driven Design", // Added/Ensured
+      "Data (AI/ML)-Driven Design", 
       "Compliant Mechanisms",
       "Inverse Design",
       "Computational Contact Mechanics",
@@ -67,7 +88,6 @@ const PrabhatProfile = () => {
       { title: "Merit awards, NIT Warangal", year: "2006, 2007" },
     ],
 
-    // Extracted from CV Leadership Table 
     leadership: [
       { role: "Faculty-in-charge, Public relation", org: "IIT Hyderabad", year: "2024-27" },
       { role: "Conference Chair, iNaCoMM 2025", org: "IIT Hyderabad", year: "2024-25" },
@@ -128,16 +148,40 @@ const PrabhatProfile = () => {
           </Button>
 
           <div className="flex flex-col md:flex-row gap-8 items-start">
-            {/* Profile Image */}
-            <div className="w-32 h-32 md:w-48 md:h-48 rounded-2xl overflow-hidden border-4 border-background shadow-xl shrink-0 bg-muted">
-              <img 
-                src={PROFILE.image} 
-                alt={PROFILE.name} 
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                    e.currentTarget.src = "https://ui-avatars.com/api/?name=Prabhat+Kumar&background=random"; 
-                }}
-              />
+            
+            {/* LEFT COLUMN: Image + Socials */}
+            <div className="flex flex-col items-center md:items-start gap-4 shrink-0">
+                {/* Profile Image */}
+                <div className="w-32 h-32 md:w-48 md:h-48 rounded-2xl overflow-hidden border-4 border-background shadow-xl bg-muted">
+                  <img 
+                    src={PROFILE.image} 
+                    alt={PROFILE.name} 
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                        e.currentTarget.src = "https://ui-avatars.com/api/?name=Prabhat+Kumar&background=random"; 
+                    }}
+                  />
+                </div>
+
+                {/* Social Media Logos Row */}
+                <div className="flex gap-3 justify-center w-full">
+                    {/* ResearchGate */}
+                    <a href={PROFILE.socials.researchGate} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white border border-gray-200 text-[#00CCBB] hover:scale-110 transition-transform shadow-sm hover:shadow-md" title="ResearchGate">
+                        <ResearchGateIcon className="h-5 w-5" />
+                    </a>
+                    {/* ORCID */}
+                    <a href={PROFILE.socials.orcid} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white border border-gray-200 text-[#A6CE39] hover:scale-110 transition-transform shadow-sm hover:shadow-md" title="ORCID">
+                        <OrcidIcon className="h-5 w-5" />
+                    </a>
+                    {/* GitHub */}
+                    <a href={PROFILE.socials.github} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white border border-gray-200 text-gray-800 hover:scale-110 transition-transform shadow-sm hover:shadow-md" title="GitHub">
+                        <Github className="h-5 w-5" />
+                    </a>
+                    {/* Google Scholar */}
+                    <a href={PROFILE.socials.googleScholar} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white border border-gray-200 text-[#4285F4] hover:scale-110 transition-transform shadow-sm hover:shadow-md" title="Google Scholar">
+                        <GoogleScholarIcon className="h-5 w-5" />
+                    </a>
+                </div>
             </div>
             
             {/* Name and Title */}

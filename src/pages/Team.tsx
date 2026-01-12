@@ -9,7 +9,8 @@ import {
   MapPin,
   ArrowRight,
   ExternalLink,
-  Briefcase
+  Briefcase,
+  Handshake // Imported Handshake icon for collaboration
 } from "lucide-react";
 
 const Team = () => {
@@ -55,9 +56,13 @@ const Team = () => {
     { name: "Nikhil Vijay Chavan", role: "M.Tech Student", image: "/Images/Team/Nikhil.jpg" },
   ];
 
-  // UPDATED: A. Padmaprabhan moved here as B.Tech
   const btechStudents = [
      { name: "A. Padmaprabhan", role: "B.Tech Student", image: "/Images/Team/Padmaprabhan.png" },
+  ];
+
+  // NEW SECTION: Collaborative Students
+  const collaboratingStudents = [
+    { name: "Aryuemaan Kumar Chowdhury", role: "M.Tech Student", image: "/Images/Team/Ary.jpg" },
   ];
 
   // ALUMNI DATA (Previous Alumni)
@@ -183,9 +188,13 @@ const Team = () => {
             <StudentGroup title="PhD Scholars" icon={School} students={phdStudents} />
             <StudentGroup title="M.Tech Students" icon={GraduationCap} students={mtechStudents} />
             
-            {/* Updated B.Tech Section with A. Padmaprabhan */}
             {btechStudents.length > 0 && (
                 <StudentGroup title="B.Tech Students" icon={User} students={btechStudents} />
+            )}
+
+            {/* NEW SECTION: COLLABORATING STUDENTS */}
+            {collaboratingStudents.length > 0 && (
+                <StudentGroup title="Collaborating Students" icon={Handshake} students={collaboratingStudents} />
             )}
 
           </div>
