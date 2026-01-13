@@ -155,9 +155,16 @@ const SOFTWARE_ITEMS: SoftwareItem[] = [
   {
     title: "PyHexTop",
     link: "https://github.com/PrabhatIn/PyHexTop",
-    paperLink: "https://arxiv.org/abs/2310.01968",
+    paperLink: "https://link.springer.com/chapter/10.1007/978-981-96-1158-4_35",
     authors: "A. Agarwal, A. Saxena, P. Kumar (2023)",
     citationDetails: "PyHexTop: a compact Python code for topology optimization using hexagonal elements, Advances in Multidisciplinary Design, Analysis and Optimization"
+  },
+    {
+    title: "topQ8, topQ9, topQ8CM, topQ9CM",
+    link: "https://onlinelibrary.wiley.com/doi/abs/10.1002/cae.70031",
+    paperLink: "https://onlinelibrary.wiley.com/doi/abs/10.1002/cae.70031",
+    authors: "SI. Sarkar, P. Kumar (2025)",
+    citationDetails: "Topology Optimization With Quadrilateral Elements: A Comparative Study, Codes, and Tutorials"
   },
   {
     title: "PyTOPress",
