@@ -20,7 +20,7 @@ const Courses = () => {
     {
       code: "ME2110",
       name: "Solid Mechanics",
-      level: "Postgraduate (PG)",
+      level: "Undergraduate (UG)",
       type: "Theory",
     },
     {
