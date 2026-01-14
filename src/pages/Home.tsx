@@ -164,14 +164,14 @@ const SOFTWARE_ITEMS: SoftwareItem[] = [
     link: "https://onlinelibrary.wiley.com/doi/abs/10.1002/cae.70031", 
     paperLink: "https://onlinelibrary.wiley.com/doi/abs/10.1002/cae.70031",
     authors: "S.I. Sarkar, P. Kumar (2025)",
-    citationDetails: "Topology Optimization With Quadrilateral Elements: A Comparative Study, Codes, and Tutorials"
+    citationDetails: "Topology Optimization With Quadrilateral Elements: A Comparative Study, Codes, and Tutorials, Computer Applications in Engineering Education 33 (3), e70031"
   },
       {
     title: "PyTOaCNN",
     link: "https://link.springer.com/article/10.1007/s00500-025-10919-y",
     paperLink: "https://link.springer.com/article/10.1007/s00500-025-10919-y",
     authors: "KS Chadha, P. Kumar (2026)",
-    citationDetails: "PyTOaCNN: Topology optimization using an adaptive convolutional neural network in Python"
+    citationDetails: "PyTOaCNN: Topology optimization using an adaptive convolutional neural network in Python, Soft Computing, 1-21"
   },
   {
     title: "PyTOPress",
