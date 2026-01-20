@@ -230,6 +230,13 @@ const NEWS_ITEMS: NewsItem[] = [
     link: "#" 
   },
   {
+    date: "Jan 20, 2026",
+    category: "Talk",
+    title: "Topology Optimization for Efficient Strucutres",
+    description: "Prof. Prabhat deliver a guest lecture at Dept. of Aerospace Engineering, School of Technology, GITAM, Hyderabad",
+    link: "#" 
+  },
+  {
     date: "Dec 10, 2025",
     category: "Talk",
     title: "TOCoDE lab presented at iNaCoMM 2025",
