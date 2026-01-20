@@ -242,7 +242,7 @@ const NEWS_ITEMS: NewsItem[] = [
     title: "NCMDAO conference paper presentation",
     description: "SI Sarkar form TOCoDE lab presented a paper at NCMDAO national conference, M. S. Ramaiah University of Applied Sciences, Bengaluru",
     link: "https://www.ncmdao.org/" 
-  }
+  },
   {
     date: "Dec 10, 2025",
     category: "Conference Presentation",
