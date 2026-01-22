@@ -73,7 +73,7 @@ const Team = () => {
     { name: "Aditi Agarwal", desc: "B. Tech student, IIT-H" },
   ];
 
-  // PASSED OUT STUDENTS
+  // ALUMNI
   const passedOutStudents = [
     // M.Tech
     { name: "Duru Bhargav Kumar", role: "M.Tech", company: "-" },
@@ -201,7 +201,7 @@ const Team = () => {
         </div>
       </section>
 
-      {/* 3. PASSED OUT STUDENTS SECTION */}
+      {/* 3. ALUMNI */}
       <section className="py-20 bg-muted/30 border-t border-border">
         <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
