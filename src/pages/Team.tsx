@@ -209,7 +209,7 @@ const Team = () => {
                     <div className="p-2 bg-primary/10 rounded-lg text-primary">
                         <Briefcase className="h-5 w-5" />
                     </div>
-                    <h2 className="text-2xl font-bold text-foreground tracking-tight">Passed Out Students</h2>
+                    <h2 className="text-2xl font-bold text-foreground tracking-tight">ALUMNI</h2>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
