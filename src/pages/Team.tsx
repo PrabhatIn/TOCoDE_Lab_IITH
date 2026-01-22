@@ -213,7 +213,7 @@ const Team = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {passedOutStudents.map((student, index) => (
+                    {ALUMNI.map((student, index) => (
                         <div key={index} className="flex flex-col p-6 bg-background border border-border rounded-xl hover:border-primary/40 hover:shadow-lg transition-all duration-300">
                             <h3 className="font-bold text-lg text-foreground mb-1">{student.name}</h3>
                             <div className="flex justify-between items-center mb-4">
