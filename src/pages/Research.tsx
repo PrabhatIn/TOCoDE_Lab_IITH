@@ -20,7 +20,7 @@ const NEWS_ITEMS = [
   {
     date: "Dec 18, 2025",
     title: "Design and Development of Composite Structure for High-Velocity Impact Energy Absorption",
-    description: "We are excited to announce that Prof. Prabhat and Prof. Chandra have been awarded ARG funding for this project from Anusandhan National Research Foundation, New Delhi, India.",
+    description: "We are excited to announce that our ANRF-ARG proposal is approved by Anusandhan National Research Foundation, New Delhi, India.",
     category: "Funding",
     link: "https://anrfonline.in/",
     featured: true // Featured headline
