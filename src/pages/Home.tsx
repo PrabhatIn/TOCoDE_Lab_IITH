@@ -193,6 +193,16 @@ const RESEARCH_AREAS = [
     title: "Computational Design",
     description: "Novel methodologies for design automation and generative engineering",
   },
+    {
+    icon: Lightbulb,
+    title: "Soft Robotics",
+    description: "Validation through physical prototyping and experimental verification",
+  },
+   {
+    icon: Lightbulb,
+    title: "AI/ML-design",
+    description: "Validation through physical prototyping and experimental verification",
+  },
   {
     icon: Lightbulb,
     title: "Experimentation",
@@ -539,7 +549,7 @@ const Home = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight">Core Research Areas</h2>
               <div className="h-1 w-12 bg-red-600 rounded-full mb-6" />
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Our lab focuses on the intersection of computational mechanics, optimization algorithms, and automated design frameworks to solve complex engineering problems.
+                Our lab focuses on the intersection of topology optimization, computational mechanics, optimization algorithms, soft robotics, AI/ML-design, and automated design frameworks to solve complex engineering/design problems.
               </p>
             </div>
           </div>
