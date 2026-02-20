@@ -196,12 +196,12 @@ const RESEARCH_AREAS = [
     {
     icon: Lightbulb,
     title: "Soft Robotics",
-    description: "Design optimization, 3D-prining, and experimental verification",
+    description: "Soft robots design optimization, 3D-prining, and experimental verification",
   },
    {
     icon: Lightbulb,
     title: "AI/ML-design",
-    description: "Deep Leaning based design",
+    description: "Deep Leaning-based designs",
   },
     {
     icon: Lightbulb,
