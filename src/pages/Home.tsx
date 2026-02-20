@@ -196,12 +196,17 @@ const RESEARCH_AREAS = [
     {
     icon: Lightbulb,
     title: "Soft Robotics",
-    description: "Validation through physical prototyping and experimental verification",
+    description: "Design optimization, 3D-prining, and experimental verification",
   },
    {
     icon: Lightbulb,
     title: "AI/ML-design",
-    description: "Validation through physical prototyping and experimental verification",
+    description: "Deep Leaning based design",
+  },
+    {
+    icon: Lightbulb,
+    title: "Compliant Mechanisms",
+    description: "Flexible structures, prototyping and validation",
   },
   {
     icon: Lightbulb,
