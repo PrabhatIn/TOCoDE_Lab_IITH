@@ -196,7 +196,7 @@ const RESEARCH_AREAS = [
     {
     icon: Lightbulb,
     title: "Soft Robotics",
-    description: "Soft robots design optimization, 3D-prining, and experimental verification",
+    description: "Soft robots design optimization, 3D-printing, and experimental verification",
   },
    {
     icon: Lightbulb,
