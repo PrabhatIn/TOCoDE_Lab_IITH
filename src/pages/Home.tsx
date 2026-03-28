@@ -29,7 +29,7 @@ interface NewsItem {
   category: string;
   title: string;
   description: string;
-  link?: string; 
+  link?: string;
 }
 
 interface SoftwareItem {
