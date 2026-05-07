@@ -1,6 +1,7 @@
+import React, { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { MeshBackground } from "@/components/MeshBackground";
-import { useNavigate } from "react-router-dom"; // Import for navigation
+import { useNavigate } from "react-router-dom"; 
 import { 
   Mail, 
   GraduationCap, 
@@ -10,11 +11,12 @@ import {
   ArrowRight,
   ExternalLink,
   Briefcase,
-  Handshake // Imported Handshake icon for collaboration
+  Handshake 
 } from "lucide-react";
 
 const Team = () => {
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate(); 
+  const [activeTab, setActiveTab] = useState("All Students");
 
   // PRINCIPAL INVESTIGATOR DATA
   const pi = {
@@ -54,18 +56,18 @@ const Team = () => {
     { name: "Chinmay Kishor Shrirame", role: "M.Tech Student", image: "/Images/Team/Chinmay.jpg" },
     { name: "Gopaljit Raj", role: "M.Tech Student", image: "/Images/Team/Gopaljit.png" },
     { name: "Nikhil Vijay Chavan", role: "M.Tech Student", image: "/Images/Team/Nikhil.jpg" },
+    { name: "Arundhati Sonawane", role: "M.Tech Student", image: "/Images/Team/Arundhati.jpg" }, // Added Arundhati
   ];
 
   const btechStudents = [
      { name: "A. Padmaprabhan", role: "B.Tech Student", image: "/Images/Team/Padmaprabhan.png" },
   ];
 
-  // NEW SECTION: Collaborative Students
   const collaboratingStudents = [
-    { name: "Aryuemaan Kumar Chowdhury", role: "M.Tech Student", image: "/Images/Team/Ary.jpg" },
+    { name: "Aryuemaan Kumar Chowdhury", role: "Collaborating Student", image: "/Images/Team/Ary.jpg" },
   ];
 
-  // ALUMNI DATA (Previous Alumni)
+  // ALUMNI DATA
   const alumni = [
     { name: "Khaish Singh Chadha", desc: "M. Tech student, IIT-H" },
     { name: "Dehlia Menge", desc: "MSc student, TU Delft" },
@@ -75,20 +77,19 @@ const Team = () => {
 
   // PASSED OUT STUDENTS
   const passedOutStudents = [
-    // M.Tech
     { name: "Duru Bhargav Kumar", role: "M.Tech", company: "-" },
     { name: "Aishwarya Desai", role: "M.Tech", company: "-" },
     { name: "Amal Shaji", role: "M.Tech", company: "-" },
-    
-    // B.Tech
     { name: "Shriram Hari", role: "B.Tech", company: "-" },
     { name: "Gunna Trishna", role: "B.Tech", company: "-" },
   ];
 
-  // Handler for clicking the PI Card
   const handlePIClick = () => {
     navigate("/prabhat-kumar"); 
   };
+
+  // Tabs for Filtering
+  const FILTER_TABS = ["All Students", "PhDs", "M.Tech Students", "B.Tech Students", "Collaborators"];
 
   return (
     <div className="min-h-screen pt-20 bg-background font-sans selection:bg-primary/10">
@@ -113,14 +114,11 @@ const Team = () => {
               <h2 className="text-xl font-bold text-foreground uppercase tracking-widest">Principal Investigator</h2>
             </div>
             
-            {/* CLICKABLE CARD WRAPPER */}
             <div 
               onClick={handlePIClick}
               className="group cursor-pointer relative bg-card border border-border hover:border-primary/50 transition-all duration-300 rounded-xl overflow-hidden shadow-sm hover:shadow-xl"
             >
               <div className="flex flex-col md:flex-row">
-                
-                {/* Image Section */}
                 <div className="md:w-1/3 relative overflow-hidden bg-muted">
                   <img 
                     src={pi.image} 
@@ -130,7 +128,6 @@ const Team = () => {
                       e.currentTarget.src = "https://ui-avatars.com/api/?name=Prabhat+Kumar&background=random"; 
                     }}
                   />
-                  {/* Overlay on hover */}
                   <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <span className="bg-background/90 text-foreground px-4 py-2 rounded-full text-sm font-semibold flex items-center shadow-lg">
                       View Profile <ArrowRight className="ml-2 h-4 w-4" />
@@ -138,7 +135,6 @@ const Team = () => {
                   </div>
                 </div>
                 
-                {/* Content Section */}
                 <div className="md:w-2/3 p-8 flex flex-col justify-between">
                   <div>
                     <div className="flex justify-between items-start">
@@ -182,20 +178,44 @@ const Team = () => {
             </div>
           </div>
 
-          {/* 2. CURRENT MEMBERS SECTION */}
-          <div className="max-w-6xl mx-auto space-y-20">
+          {/* 2. CURRENT MEMBERS SECTION WITH TABS */}
+          <div className="max-w-6xl mx-auto space-y-12">
             
-            <StudentGroup title="PhD Scholars" icon={School} students={phdStudents} />
-            <StudentGroup title="M.Tech Students" icon={GraduationCap} students={mtechStudents} />
-            
-            {btechStudents.length > 0 && (
-                <StudentGroup title="B.Tech Students" icon={User} students={btechStudents} />
-            )}
+            {/* Filter Tabs */}
+            <div className="flex flex-wrap items-center gap-2 mb-8 border-b border-border/50 pb-6">
+              {FILTER_TABS.map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border ${
+                    activeTab === tab 
+                      ? "bg-primary text-white border-primary shadow-md" 
+                      : "bg-card text-muted-foreground border-border hover:border-primary/50 hover:text-foreground"
+                  }`}
+                >
+                  {tab}
+                </button>
+              ))}
+            </div>
 
-            {/* NEW SECTION: COLLABORATING STUDENTS */}
-            {collaboratingStudents.length > 0 && (
+            {/* Conditionally Rendered Groups based on Active Tab */}
+            <div className="space-y-16">
+              {(activeTab === "All Students" || activeTab === "PhDs") && phdStudents.length > 0 && (
+                <StudentGroup title="PhD Scholars" icon={School} students={phdStudents} />
+              )}
+              
+              {(activeTab === "All Students" || activeTab === "M.Tech Students") && mtechStudents.length > 0 && (
+                <StudentGroup title="M.Tech Students" icon={GraduationCap} students={mtechStudents} />
+              )}
+              
+              {(activeTab === "All Students" || activeTab === "B.Tech Students") && btechStudents.length > 0 && (
+                <StudentGroup title="B.Tech Students" icon={User} students={btechStudents} />
+              )}
+
+              {(activeTab === "All Students" || activeTab === "Collaborators") && collaboratingStudents.length > 0 && (
                 <StudentGroup title="Collaborating Students" icon={Handshake} students={collaboratingStudents} />
-            )}
+              )}
+            </div>
 
           </div>
         </div>
@@ -264,14 +284,14 @@ const Team = () => {
 
 // Reusable Component for Student Groups
 const StudentGroup = ({ title, icon: Icon, students }: { title: string, icon: any, students: any[] }) => (
-  <div>
+  <div className="animate-in fade-in duration-500">
     <div className="flex items-center gap-3 mb-8">
       <div className="p-2 bg-primary/10 rounded-lg text-primary">
         <Icon className="h-5 w-5" />
       </div>
       <h2 className="text-2xl font-bold text-foreground tracking-tight">{title}</h2>
     </div>
-    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       {students.map((student, index) => (
         <StudentCard key={index} student={student} />
       ))}
@@ -279,14 +299,13 @@ const StudentGroup = ({ title, icon: Icon, students }: { title: string, icon: an
   </div>
 );
 
-// Minimalist Student Card - UPDATED: Removed grayscale effect
+// Minimalist Student Card
 const StudentCard = ({ student }: { student: { name: string; role: string; image: string } }) => (
   <div className="group relative flex flex-col bg-card border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-md">
     <div className="aspect-[4/5] w-full bg-muted overflow-hidden relative">
       <img 
         src={student.image} 
         alt={student.name}
-        // Removed grayscale classes
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         loading="lazy"
         onError={(e) => {

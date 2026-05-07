@@ -9,7 +9,7 @@ import { Footer } from "@/components/Footer";
 // Page Imports
 import Home from "./pages/Home";
 import Research from "./pages/Research";
-import Projects from "./pages/Projects"; // <--- 1. Import Projects Page
+import Projects from "./pages/Projects"; 
 import Publications from "./pages/Publications";
 import Team from "./pages/Team";
 import Software from "./pages/Software";
@@ -18,6 +18,7 @@ import Positions from "./pages/News";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import PrabhatProfile from "./pages/prabhat-kumar";
+import Gallery from "./pages/Gallery";
 
 const queryClient = new QueryClient();
 
@@ -33,9 +34,9 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Home />} />
               
-              {/* 2. ADD THE PROJECTS ROUTE HERE */}
+              {/* Added Routes */}
               <Route path="/projects" element={<Projects />} />
-
+              <Route path="/gallery" element={<Gallery />} /> {/* <--- ADDED THIS LINE */}
               <Route path="/research" element={<Research />} />
               <Route path="/publications" element={<Publications />} />
               <Route path="/team" element={<Team />} />
