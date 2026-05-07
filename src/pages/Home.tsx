@@ -29,7 +29,7 @@ interface NewsItem {
   category: string;
   title: string;
   description: string;
-  link?: string; 
+  link?: string;
 }
 
 interface SoftwareItem {
@@ -155,9 +155,23 @@ const SOFTWARE_ITEMS: SoftwareItem[] = [
   {
     title: "PyHexTop",
     link: "https://github.com/PrabhatIn/PyHexTop",
-    paperLink: "https://arxiv.org/abs/2310.01968",
+    paperLink: "https://link.springer.com/chapter/10.1007/978-981-96-1158-4_35",
     authors: "A. Agarwal, A. Saxena, P. Kumar (2023)",
     citationDetails: "PyHexTop: a compact Python code for topology optimization using hexagonal elements, Advances in Multidisciplinary Design, Analysis and Optimization"
+  },
+    {
+    title: "topQ8, topQ9, topQ8CM, topQ9CM, topQ8Press, topQ9Press",
+    link: "https://onlinelibrary.wiley.com/doi/abs/10.1002/cae.70031", 
+    paperLink: "https://onlinelibrary.wiley.com/doi/abs/10.1002/cae.70031",
+    authors: "S.I. Sarkar, P. Kumar (2025)",
+    citationDetails: "Topology Optimization With Quadrilateral Elements: A Comparative Study, Codes, and Tutorials, Computer Applications in Engineering Education 33 (3), e70031"
+  },
+      {
+    title: "PyTOaCNN",
+    link: "https://link.springer.com/article/10.1007/s00500-025-10919-y",
+    paperLink: "https://link.springer.com/article/10.1007/s00500-025-10919-y",
+    authors: "KS Chadha, P. Kumar (2026)",
+    citationDetails: "PyTOaCNN: Topology optimization using an adaptive convolutional neural network in Python, Soft Computing, 1-21"
   },
   {
     title: "PyTOPress",
@@ -179,6 +193,21 @@ const RESEARCH_AREAS = [
     title: "Computational Design",
     description: "Novel methodologies for design automation and generative engineering",
   },
+    {
+    icon: Lightbulb,
+    title: "Soft Robotics",
+    description: "Soft robots design optimization, 3D-printing, and experimental verification",
+  },
+   {
+    icon: Lightbulb,
+    title: "AI/ML-design",
+    description: "Deep Leaning-based designs",
+  },
+    {
+    icon: Lightbulb,
+    title: "Compliant Mechanisms",
+    description: "Flexible structures, prototyping and validation",
+  },
   {
     icon: Lightbulb,
     title: "Experimentation",
@@ -191,7 +220,7 @@ const NEWS_ITEMS: NewsItem[] = [
     date: "Dec 18, 2025",
     category: "Funding",
     title: "Design and Development of Composite Structure for High-Velocity Impact Energy Absorption and Dissipation using Multiscale Topology Optimization",
-    description: "We are excited to announce that Prof. Prabhat and Prof. Chandra have been awarded ARG funding for above-mentioned project from Anusandhan National Research Foundation, New Delhi, India",
+    description: "We are excited to announce that our ANRF-ARG propodal is approved by Anusandhan National Research Foundation, New Delhi, India",
     link: "https://anrfonline.in/" 
   },
   {
@@ -216,11 +245,25 @@ const NEWS_ITEMS: NewsItem[] = [
     link: "#" 
   },
   {
-    date: "Dec 10, 2025",
+    date: "Jan 20, 2026",
     category: "Talk",
-    title: "TOCoDE lab presented at iNaCoMM 2025",
-    description: "TOCoDE team presented four papers in iNaCoMM2025 international conference held at IIT Hyderabad",
+    title: "Topology Optimization for Efficient Structures",
+    description: "Prof. Prabhat delivered a guest lecture at Dept. of Aerospace Engineering, School of Technology, GITAM, Hyderabad",
     link: "#" 
+  },
+  {
+    date: "Dec 4, 2025",
+    category: "Conference Presentation",
+    title: "NCMDAO conference paper presentation",
+    description: "SI Sarkar form TOCoDE lab presented a paper at NCMDAO national conference, M. S. Ramaiah University of Applied Sciences, Bengaluru",
+    link: "https://www.ncmdao.org/" 
+  },
+  {
+    date: "Dec 10, 2025",
+    category: "Conference Presentation",
+    title: "iNaCoMM 2025 conference paper presentation",
+    description: "TOCoDE team presented four papers at iNaCoMM2025 international conference, IIT Hyderabad",
+    link: "https://inacomm2025.ammindia.org/" 
   }
 ];
 
@@ -511,7 +554,7 @@ const Home = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight">Core Research Areas</h2>
               <div className="h-1 w-12 bg-red-600 rounded-full mb-6" />
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Our lab focuses on the intersection of computational mechanics, optimization algorithms, and automated design frameworks to solve complex engineering problems.
+                Our lab focuses on the intersection of topology optimization, computational mechanics, optimization algorithms, soft robotics, AI/ML-design, and automated design frameworks to solve complex engineering/design problems.
               </p>
             </div>
           </div>

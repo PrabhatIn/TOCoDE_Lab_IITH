@@ -18,9 +18,15 @@ const Courses = () => {
       type: "Theory",
     },
     {
+      code: "ME5053",
+      name: "Soft Robotics",
+      level: "Postgraduate (PG)",
+      type: "Theory",
+    },
+    {
       code: "ME2110",
       name: "Solid Mechanics",
-      level: "Postgraduate (PG)",
+      level: "Undergraduate (UG)",
       type: "Theory",
     },
     {

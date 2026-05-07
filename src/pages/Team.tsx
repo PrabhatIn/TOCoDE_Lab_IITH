@@ -76,8 +76,10 @@ const Team = () => {
   ];
 
   // PASSED OUT STUDENTS
-  const passedOutStudents = [
-    { name: "Duru Bhargav Kumar", role: "M.Tech", company: "-" },
+// ALUMNI
+  const ALUMNI = [
+    // M.Tech
+    { name: "Duru Bhargav Kumar", role: "M.Tech", company: "-" },
     { name: "Aishwarya Desai", role: "M.Tech", company: "-" },
     { name: "Amal Shaji", role: "M.Tech", company: "-" },
     { name: "Shriram Hari", role: "B.Tech", company: "-" },
