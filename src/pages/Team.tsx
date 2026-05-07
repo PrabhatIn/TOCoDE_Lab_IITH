@@ -56,7 +56,7 @@ const Team = () => {
     { name: "Chinmay Kishor Shrirame", role: "M.Tech Student", image: "/Images/Team/Chinmay.jpg" },
     { name: "Gopaljit Raj", role: "M.Tech Student", image: "/Images/Team/Gopaljit.png" },
     { name: "Nikhil Vijay Chavan", role: "M.Tech Student", image: "/Images/Team/Nikhil.jpg" },
-    { name: "Arundhati Sonawane", role: "M.Tech Student", image: "/Images/Team/Arundhati.jpg" }, // Added Arundhati
+    { name: "Arundhati Sonawane", role: "M.Tech Student", image: "/Images/Team/Aru.png" }, 
   ];
 
   const btechStudents = [
@@ -75,11 +75,9 @@ const Team = () => {
     { name: "Aditi Agarwal", desc: "B. Tech student, IIT-H" },
   ];
 
-  // PASSED OUT STUDENTS
-// ALUMNI
-  const ALUMNI = [
-    // M.Tech
-    { name: "Duru Bhargav Kumar", role: "M.Tech", company: "-" },
+  // PASSED OUT STUDENTS (Fixed the variable name here to match the rendering logic)
+  const passedOutStudents = [
+    { name: "Duru Bhargav Kumar", role: "M.Tech", company: "-" },
     { name: "Aishwarya Desai", role: "M.Tech", company: "-" },
     { name: "Amal Shaji", role: "M.Tech", company: "-" },
     { name: "Shriram Hari", role: "B.Tech", company: "-" },
