@@ -217,7 +217,6 @@ const Team = () => {
                // <StudentGroup title="Collaborating Students" icon={Handshake} students={collaboratingStudents} />
              // )}
             </div>
-
           </div>
         </div>
       </section>
