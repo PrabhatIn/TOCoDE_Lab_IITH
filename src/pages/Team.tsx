@@ -212,6 +212,9 @@ const Team = () => {
               
               {(activeTab === "All Students" || activeTab === "B.Tech Students") && btechStudents.length > 0 && (
                 <StudentGroup title="B.Tech Students" icon={User} students={btechStudents} />
+              // {(activeTab === "All Students" || activeTab === "Collaborators") && collaboratingStudents.length > 0 && (
+               // <StudentGroup title="Collaborating Students" icon={Handshake} students={collaboratingStudents} />
+             // )}
               )}
             </div>
           </div>
