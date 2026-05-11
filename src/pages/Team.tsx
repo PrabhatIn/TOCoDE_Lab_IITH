@@ -57,15 +57,16 @@ const Team = () => {
     { name: "Gopaljit Raj", role: "M.Tech Student", image: "/Images/Team/Gopaljit.png" },
     { name: "Nikhil Vijay Chavan", role: "M.Tech Student", image: "/Images/Team/Nikhil.jpg" },
     { name: "Arundhati Sonawane", role: "M.Tech Student", image: "/Images/Team/Aru.png" }, 
+    { name: "Aryuemaan Kumar Chowdhury", role: "M.Tech collaborating Student", image: "/Images/Team/Ary.jpg" },
   ];
 
   const btechStudents = [
      { name: "A. Padmaprabhan", role: "B.Tech Student", image: "/Images/Team/Padmaprabhan.png" },
   ];
 
-  const collaboratingStudents = [
-    { name: "Aryuemaan Kumar Chowdhury", role: "Collaborating Student", image: "/Images/Team/Ary.jpg" },
-  ];
+  //const collaboratingStudents = [
+    //{ name: "Aryuemaan Kumar Chowdhury", role: "Collaborating Student", image: "/Images/Team/Ary.jpg" },
+//  ];
 
   // ALUMNI DATA
   const alumni = [
@@ -89,7 +90,8 @@ const Team = () => {
   };
 
   // Tabs for Filtering
-  const FILTER_TABS = ["All Students", "PhDs", "M.Tech Students", "B.Tech Students", "Collaborators"];
+  //const FILTER_TABS = ["All Students", "PhDs", "M.Tech Students", "B.Tech Students", "Collaborators"];
+  const FILTER_TABS = ["All Students", "PhDs", "M.Tech Students", "B.Tech Students";
 
   return (
     <div className="min-h-screen pt-20 bg-background font-sans selection:bg-primary/10">
@@ -211,10 +213,9 @@ const Team = () => {
               {(activeTab === "All Students" || activeTab === "B.Tech Students") && btechStudents.length > 0 && (
                 <StudentGroup title="B.Tech Students" icon={User} students={btechStudents} />
               )}
-
-              {(activeTab === "All Students" || activeTab === "Collaborators") && collaboratingStudents.length > 0 && (
-                <StudentGroup title="Collaborating Students" icon={Handshake} students={collaboratingStudents} />
-              )}
+             // {(activeTab === "All Students" || activeTab === "Collaborators") && collaboratingStudents.length > 0 && (
+               // <StudentGroup title="Collaborating Students" icon={Handshake} students={collaboratingStudents} />
+             // )}
             </div>
 
           </div>
