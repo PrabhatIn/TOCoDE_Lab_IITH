@@ -25,7 +25,7 @@ const GALLERY_DATA = [
   {
     id: 2,
     title: "ToCoDE Lab Inauguration",
-    category: "Events",
+    category: "Workshops",
     date: "Jan 2024",
     location: "IIT Hyderabad",
     image: "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=2086&auto=format&fit=crop",
@@ -49,7 +49,7 @@ const GALLERY_DATA = [
   {
     id: 5,
     title: "Team Outing & Brainstorming",
-    category: "Events",
+    category: "Workshops",
     date: "Feb 2025",
     location: "Hyderabad City",
     image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop",
@@ -57,14 +57,14 @@ const GALLERY_DATA = [
   {
     id: 6,
     title: "Computational Mechanics Workshop",
-    category: "Conferences",
+    category: "Workshops",
     date: "Aug 2024",
     location: "IIT Kanpur",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop",
   },
 ];
 
-const CATEGORIES = ["All", "Lab Work", "Conferences", "Events", "Awards"];
+const CATEGORIES = ["All", "Lab Work", "Conferences", "Workshops", "Awards"];
 
 const Gallery = () => {
   const [activeFilter, setActiveFilter] = useState("All");

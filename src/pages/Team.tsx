@@ -55,6 +55,8 @@ const Team = () => {
     { name: "Supantha Chaudhuri", role: "M.Tech Student", image: "/Images/Team/Supantha.png" },
     { name: "Chinmay Kishor Shrirame", role: "M.Tech Student", image: "/Images/Team/Chinmay.jpg" },
     { name: "Gopaljit Raj", role: "M.Tech Student", image: "/Images/Team/Gopaljit.png" },
+    { name: "Avinash Yadav", role: "M.Tech Student", image: "/Images/Team/Avinash.jpg" },
+    { name: "Mukki Prasanth Raju", role: "M.Tech Student", image: "/Images/Team/Mukki.jpg" },
     { name: "Nikhil Vijay Chavan", role: "M.Tech Student", image: "/Images/Team/Nikhil.jpg" },
     { name: "Arundhati Sonawane", role: "M.Tech Student", image: "/Images/Team/Aru.png" }, 
     { name: "Aryuemaan Kumar Chowdhury", role: "M.Tech collaborating Student", image: "/Images/Team/Ary.jpg" },
@@ -62,6 +64,9 @@ const Team = () => {
 
   const btechStudents = [
      { name: "A. Padmaprabhan", role: "B.Tech Student", image: "/Images/Team/Padmaprabhan.png" },
+     { name: "Joel J Nellikkunnel", role: "B.Tech Student", image: "/Images/Team/Joel.jpg" },
+      { name: "Pardu", role: "B.Tech Student", image: "/Images/Team/Satyarth.jpg" },
+
   ];
 
   //const collaboratingStudents = [
@@ -91,7 +96,7 @@ const Team = () => {
 
   // Tabs for Filtering
   //const FILTER_TABS = ["All Students", "PhDs", "M.Tech Students", "B.Tech Students", "Collaborators"];
-  const FILTER_TABS = ["All Students", "PhDs", "M.Tech Students", "B.Tech Students";
+  const FILTER_TABS = ["All Students", "PhDs", "M.Tech Students", "B.Tech Students"]
 
   return (
     <div className="min-h-screen pt-20 bg-background font-sans selection:bg-primary/10">
