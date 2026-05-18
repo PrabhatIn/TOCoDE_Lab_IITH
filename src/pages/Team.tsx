@@ -52,7 +52,6 @@ const Team = () => {
   ];
 
   const mtechStudents = [
-    { name: "Supantha Chaudhuri", role: "M.Tech Student", image: "/Images/Team/Supantha.png" },
     { name: "Chinmay Kishor Shrirame", role: "M.Tech Student", image: "/Images/Team/Chinmay.jpg" },
     { name: "Gopaljit Raj", role: "M.Tech Student", image: "/Images/Team/Gopaljit.png" },
     { name: "Avinash Yadav", role: "M.Tech Student", image: "/Images/Team/Avinash.jpg" },
