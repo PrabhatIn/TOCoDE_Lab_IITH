@@ -59,7 +59,7 @@ const Team = () => {
     { name: "Mukki Prasanth Raju", role: "M.Tech Student", image: "/Images/Team/Mukki.jpg" },
     { name: "Nikhil Vijay Chavan", role: "M.Tech Student", image: "/Images/Team/Nikhil.jpg" },
     { name: "Arundhati Sonawane", role: "M.Tech Student", image: "/Images/Team/Aru.png" }, 
-    { name: "Aryuemaan Kumar Chowdhury", role: "M.Tech collaborating Student", image: "/Images/Team/Ary.jpg" },
+    { name: "Aryuemaan Kumar Chowdhury", role: "M.Tech Student", image: "/Images/Team/Ary.jpg" },
   ];
 
   const btechStudents = [

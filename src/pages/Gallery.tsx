@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { MeshBackground } from "@/components/MeshBackground";
 import { 
   ImageIcon, 
-  MapPin, 
-  Calendar, 
   ZoomIn, 
   X,
   Camera
@@ -18,48 +16,36 @@ const GALLERY_DATA = [
     id: 1,
     title: "International Conference on Topology Optimization",
     category: "Conferences",
-    date: "Oct 2024",
-    location: "TU Delft, Netherlands",
     image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop",
   },
   {
     id: 2,
     title: "ToCoDE Lab Inauguration",
     category: "Workshops",
-    date: "Jan 2024",
-    location: "IIT Hyderabad",
     image: "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=2086&auto=format&fit=crop",
   },
   {
     id: 3,
     title: "Soft Robotics Prototype Testing",
     category: "Lab Work",
-    date: "Mar 2025",
-    location: "ToCoDE Lab",
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop",
   },
   {
     id: 4,
     title: "Best Paper Award Ceremony",
     category: "Awards",
-    date: "Dec 2024",
-    location: "IISc Bangalore",
     image: "https://images.unsplash.com/photo-1531685250784-af587016e6ba?q=80&w=1974&auto=format&fit=crop",
   },
   {
     id: 5,
     title: "Team Outing & Brainstorming",
     category: "Workshops",
-    date: "Feb 2025",
-    location: "Hyderabad City",
     image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop",
   },
   {
     id: 6,
     title: "Computational Mechanics Workshop",
     category: "Workshops",
-    date: "Aug 2024",
-    location: "IIT Kanpur",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop",
   },
 ];
@@ -85,9 +71,6 @@ const Gallery = () => {
         <MeshBackground />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center p-3 bg-primary/10 rounded-2xl text-primary mb-6">
-              <Camera className="h-8 w-8" />
-            </div>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground tracking-tight mb-4">
               Lab Gallery
             </h1>
@@ -144,22 +127,9 @@ const Gallery = () => {
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                     <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="px-2.5 py-1 text-[10px] uppercase tracking-wider font-bold bg-primary text-white rounded-full">
-                          {item.category}
-                        </span>
-                      </div>
-                      <h3 className="text-white font-bold text-lg leading-tight mb-2">
+                      <h3 className="text-white font-bold text-xl leading-tight">
                         {item.title}
                       </h3>
-                      <div className="flex items-center gap-4 text-white/80 text-sm">
-                        <span className="flex items-center gap-1.5">
-                          <Calendar className="h-3.5 w-3.5" /> {item.date}
-                        </span>
-                        <span className="flex items-center gap-1.5">
-                          <MapPin className="h-3.5 w-3.5" /> {item.location}
-                        </span>
-                      </div>
                     </div>
                   </div>
                   
@@ -210,20 +180,9 @@ const Gallery = () => {
             
             {/* Caption Area */}
             <div className="mt-6 text-center max-w-2xl">
-              <div className="inline-block px-3 py-1 mb-3 text-xs font-semibold tracking-wider text-primary bg-primary/10 rounded-full border border-primary/20">
-                {selectedImage.category}
-              </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
+              <h2 className="text-2xl md:text-3xl font-bold text-white">
                 {selectedImage.title}
               </h2>
-              <div className="flex flex-wrap items-center justify-center gap-4 text-white/70 text-sm">
-                <span className="flex items-center gap-1.5">
-                  <Calendar className="h-4 w-4" /> {selectedImage.date}
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <MapPin className="h-4 w-4" /> {selectedImage.location}
-                </span>
-              </div>
             </div>
 
           </div>
