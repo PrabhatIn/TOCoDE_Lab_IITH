@@ -10,7 +10,7 @@ const Software = () => {
       link: "https://github.com/PrabhatIn/HoneyTop90",
       isEmail: false,
       image: "https://placehold.co/800x600/e2e8f0/1e293b?text=HoneyTop90\nVisualization",
-      paperLink: "https://arxiv.org/pdf/2201.10248v3",
+      paperLink: "https://link.springer.com/article/10.1007/s11081-022-09715-6",
     },
     {
       title: "TOPress",
@@ -18,7 +18,7 @@ const Software = () => {
       link: "https://github.com/PrabhatIn/TOPress",
       isEmail: false,
       image: "https://placehold.co/800x600/e2e8f0/1e293b?text=TOPress\nVisualization",
-      paperLink: "https://arxiv.org/pdf/2405.07733v2",
+      paperLink: "https://link.springer.com/article/10.1007/s00158-023-03533-9",
     },
     {
       title: "SoRoTop",
@@ -26,7 +26,7 @@ const Software = () => {
       link: "https://github.com/PrabhatIn/SoRoTop",
       isEmail: false,
       image: "https://placehold.co/800x600/e2e8f0/1e293b?text=SoRoTop\nVisualization",
-      paperLink: "https://arxiv.org/pdf/2401.03372",
+      paperLink: "https://link.springer.com/article/10.1007/s11081-023-09865-1",
     },
     {
       title: "TOPress3D",
@@ -42,7 +42,7 @@ const Software = () => {
       link: "https://github.com/PrabhatIn/PyHexTop",
       isEmail: false,
       image: "https://placehold.co/800x600/e2e8f0/1e293b?text=PyHexTop\nVisualization",
-      paperLink: "https://arxiv.org/abs/2310.01968",
+      paperLink: "https://link.springer.com/chapter/10.1007/978-981-96-1158-4_35",
     },
     {
       title: "PyTOPress",
