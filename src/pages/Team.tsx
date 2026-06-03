@@ -11,7 +11,7 @@ import {
   ArrowRight,
   ExternalLink,
   Briefcase,
-  Handshake 
+  Linkedin 
 } from "lucide-react";
 
 const Team = () => {
@@ -46,47 +46,38 @@ const Team = () => {
 
   // CURRENT MEMBERS DATA
   const phdStudents = [
-    { name: "Swagatam Islam Sarkar", role: "PhD Scholar", image: "/Images/Team/Swagatam.jpg" },
+    { name: "Swagatam Islam Sarkar", role: "PhD Scholar", image: "/Images/Team/Swagatam.jpg", linkedin: "https://www.linkedin.com/in/swagatam-islam-sarkar-0b7832107" },
     { name: "Raghvendra  K", role: "PhD Scholar", image: "/Images/Team/Raghvendra.jpg" },
     { name: "Sukka Siddhardha", role: "PhD Scholar", image: "/Images/Team/sukka.jpg" },
   ];
 
   const mtechStudents = [
-    { name: "Chinmay Kishor Shrirame", role: "M.Tech Student", image: "/Images/Team/Chinmay.jpg" },
+    { name: "Chinmay Kishor Shrirame", role: "M.Tech Student", image: "/Images/Team/Chinmay.jpg", linkedin: "https://www.linkedin.com/in/chinmay-shrirame-678542356?utm_source=share&utm_campaign=share" },
     { name: "Gopaljit Raj", role: "M.Tech Student", image: "/Images/Team/Gopaljit.png" },
     { name: "Avinash Yadav", role: "M.Tech Student", image: "/Images/Team/Avinash.jpg" },
     { name: "Mukki Prasanth Raju", role: "M.Tech Student", image: "/Images/Team/Mukki.jpg" },
     { name: "Nikhil Vijay Chavan", role: "M.Tech Student", image: "/Images/Team/Nikhil.jpg" },
     { name: "Arundhati Sonawane", role: "M.Tech Student", image: "/Images/Team/Aru.png" }, 
-    { name: "Aryuemaan Kumar Chowdhury", role: "M.Tech Student", image: "/Images/Team/Ary.jpg" },
+    { name: "Aryuemaan Kumar Chowdhury", role: "M.Tech Student", image: "/Images/Team/Ary.jpg", linkedin: "https://www.linkedin.com/in/aryuemaanchowdhury/" },
   ];
 
   const btechStudents = [
-     { name: "A. Padmaprabhan", role: "B.Tech Student", image: "/Images/Team/Padmaprabhan.png" },
+     { name: "A. Padmaprabhan", role: "B.Tech Student", image: "/Images/Team/Padmaprabhan.png", linkedin: "https://www.linkedin.com/in/padmaprabhan-a-99568a24b?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
      { name: "Joel J Nellikkunnel", role: "B.Tech Student", image: "/Images/Team/Joel.jpg" },
-      { name: "Pardu", role: "B.Tech Student", image: "/Images/Team/Satyarth.jpg" },
-
+     { name: "Pardu", role: "B.Tech Student", image: "/Images/Team/Satyarth.jpg" },
   ];
 
-  //const collaboratingStudents = [
-    //{ name: "Aryuemaan Kumar Chowdhury", role: "Collaborating Student", image: "/Images/Team/Ary.jpg" },
-//  ];
-
-  // ALUMNI DATA
-  const alumni = [
-    { name: "Khaish Singh Chadha", desc: "M. Tech student, IIT-H" },
-    { name: "Dehlia Menge", desc: "MSc student, TU Delft" },
-    { name: "Shawn Dmello", desc: "MSc student, TU Delft" },
-    { name: "Aditi Agarwal", desc: "B. Tech student, IIT-H" },
-  ];
-
-  // PASSED OUT STUDENTS (Fixed the variable name here to match the rendering logic)
-  const passedOutStudents = [
+  // FORMER MEMBERS DATA (Merged Alumni and Passed Out Students)
+  const formerMembers = [
     { name: "Duru Bhargav Kumar", role: "M.Tech", company: "-" },
     { name: "Aishwarya Desai", role: "M.Tech", company: "-" },
     { name: "Amal Shaji", role: "M.Tech", company: "-" },
     { name: "Shriram Hari", role: "B.Tech", company: "-" },
     { name: "Gunna Trishna", role: "B.Tech", company: "-" },
+    { name: "Khaish Singh Chadha", role: "M.Tech student, IIT-H", company: "-" },
+    { name: "Dehlia Menge", role: "MSc student, TU Delft", company: "-" },
+    { name: "Shawn Dmello", role: "MSc student, TU Delft", company: "-" },
+    { name: "Aditi Agarwal", role: "B.Tech student, IIT-H", company: "-" },
   ];
 
   const handlePIClick = () => {
@@ -94,7 +85,6 @@ const Team = () => {
   };
 
   // Tabs for Filtering
-  //const FILTER_TABS = ["All Students", "PhDs", "M.Tech Students", "B.Tech Students", "Collaborators"];
   const FILTER_TABS = ["All Students", "PhDs", "M.Tech Students", "B.Tech Students"];
 
   return (
@@ -216,16 +206,13 @@ const Team = () => {
               
               {(activeTab === "All Students" || activeTab === "B.Tech Students") && btechStudents.length > 0 && (
                 <StudentGroup title="B.Tech Students" icon={User} students={btechStudents} />
-              // {(activeTab === "All Students" || activeTab === "Collaborators") && collaboratingStudents.length > 0 && (
-               // <StudentGroup title="Collaborating Students" icon={Handshake} students={collaboratingStudents} />
-             // )}
               )}
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. PASSED OUT STUDENTS SECTION */}
+      {/* 3. FORMER MEMBERS SECTION */}
       <section className="py-20 bg-muted/30 border-t border-border">
         <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
@@ -233,11 +220,11 @@ const Team = () => {
                     <div className="p-2 bg-primary/10 rounded-lg text-primary">
                         <Briefcase className="h-5 w-5" />
                     </div>
-                    <h2 className="text-2xl font-bold text-foreground tracking-tight">Passed Out Students</h2>
+                    <h2 className="text-2xl font-bold text-foreground tracking-tight">Former Members</h2>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {passedOutStudents.map((student, index) => (
+                    {formerMembers.map((student, index) => (
                         <div key={index} className="flex flex-col p-6 bg-background border border-border rounded-xl hover:border-primary/40 hover:shadow-lg transition-all duration-300">
                             <h3 className="font-bold text-lg text-foreground mb-1">{student.name}</h3>
                             <div className="flex justify-between items-center mb-4">
@@ -256,30 +243,6 @@ const Team = () => {
                     ))}
                 </div>
             </div>
-        </div>
-      </section>
-
-      {/* 4. ALUMNI SECTION */}
-      <section className="py-20 bg-muted/10 border-t border-border">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold mb-8 text-foreground flex items-center gap-3">
-              <span className="h-1 w-8 bg-muted-foreground/50 rounded-full"></span>
-              Alumni Network
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {alumni.map((alum, index) => (
-                <div key={index} className="group flex items-center justify-between p-5 bg-background border border-border rounded-lg hover:border-primary/50 transition-all duration-300">
-                  <div>
-                    <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">{alum.name}</h3>
-                    <p className="text-sm text-muted-foreground">{alum.desc}</p>
-                  </div>
-                  <GraduationCap className="h-5 w-5 text-muted-foreground/30 group-hover:text-primary/30 transition-colors" />
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
     </div>
@@ -304,7 +267,7 @@ const StudentGroup = ({ title, icon: Icon, students }: { title: string, icon: an
 );
 
 // Minimalist Student Card
-const StudentCard = ({ student }: { student: { name: string; role: string; image: string } }) => (
+const StudentCard = ({ student }: { student: { name: string; role: string; image: string; linkedin?: string } }) => (
   <div className="group relative flex flex-col bg-card border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-md">
     <div className="aspect-[4/5] w-full bg-muted overflow-hidden relative">
       <img 
@@ -317,13 +280,26 @@ const StudentCard = ({ student }: { student: { name: string; role: string; image
         }}
       />
     </div>
-    <div className="p-4 bg-card z-10 border-t border-border">
-      <h3 className="font-bold text-foreground text-lg leading-tight group-hover:text-primary transition-colors line-clamp-1" title={student.name}>
-        {student.name}
-      </h3>
-      <p className="text-xs font-medium text-muted-foreground mt-1 uppercase tracking-wide">
-        {student.role}
-      </p>
+    <div className="p-4 bg-card z-10 border-t border-border flex justify-between items-center">
+      <div className="flex-1 pr-2">
+        <h3 className="font-bold text-foreground text-lg leading-tight group-hover:text-primary transition-colors line-clamp-1" title={student.name}>
+          {student.name}
+        </h3>
+        <p className="text-xs font-medium text-muted-foreground mt-1 uppercase tracking-wide">
+          {student.role}
+        </p>
+      </div>
+      {student.linkedin && (
+        <a 
+          href={student.linkedin} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="text-muted-foreground hover:text-[#0a66c2] transition-colors"
+          title={`LinkedIn - ${student.name}`}
+        >
+          <Linkedin className="h-5 w-5" />
+        </a>
+      )}
     </div>
   </div>
 );
