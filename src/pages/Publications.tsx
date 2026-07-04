@@ -271,6 +271,17 @@ const Research = () => {
       category: "Conference Publications",
       icon: Presentation,
       years: [
+              {
+          year: "2025",
+          items: [
+            {
+              title: "TO-SoFiT: Topology Optimization of Hydraulic Soft Fish Tail Design for programmable undulating locomotion",
+              authors: "A Padmaprabhan, A Shaji, P Kumar",
+              venue: "AIR '25: Proceedings of the 2025 7th International Conference on Advances in Robotics",
+              link: "https://dl.acm.org/doi/10.1145/3787370.3787419"
+            }
+          ]
+        },
         {
           year: "2023",
           items: [
