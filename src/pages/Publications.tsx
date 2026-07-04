@@ -190,10 +190,10 @@ const Research = () => {
               link: "https://link.springer.com/chapter/10.1007/978-3-031-20353-4_2"
             },
                     {
-              title: "Towards Topology Optimization of Pressure-Driven Soft Robots",
+              title: "Topology optimization of pressure-loaded multi-material structures",
               authors: "P Kumar",
-              venue: "Microactuators, Microsensors and Micromechanisms: MAMM 2022, 19-30",
-              link: "https://link.springer.com/chapter/10.1007/978-3-031-20353-4_2"
+              venue: "Structural Integrity Conference and Exhibition, 339-351: SICE 2022",
+              link: "https://link.springer.com/chapter/10.1007/978-981-97-6367-2_28"
             }
           ]
         },
