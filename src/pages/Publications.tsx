@@ -188,6 +188,12 @@ const Research = () => {
               authors: "P Kumar",
               venue: "Microactuators, Microsensors and Micromechanisms: MAMM 2022, 19-30",
               link: "https://link.springer.com/chapter/10.1007/978-3-031-20353-4_2"
+            },
+                    {
+              title: "Towards Topology Optimization of Pressure-Driven Soft Robots",
+              authors: "P Kumar",
+              venue: "Microactuators, Microsensors and Micromechanisms: MAMM 2022, 19-30",
+              link: "https://link.springer.com/chapter/10.1007/978-3-031-20353-4_2"
             }
           ]
         },
