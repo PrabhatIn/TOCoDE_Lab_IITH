@@ -9,6 +9,29 @@ const Research = () => {
       category: "Journal Publications",
       icon: FileText,
       years: [
+              {
+          year: "2026",
+          items: [
+            {
+              title: "Soft pneumatic grippers: Topology optimization, 3D-printing and experimental validation",
+              authors: " P Kumar, C Prakash, J Pinskier, D Howard, M Langelaar",
+              venue: "Mechanism and Machine Theory 228, 106531",
+              link: "https://www.sciencedirect.com/science/article/pii/S0094114X26001813?__cf_chl_f_tk=janItWwlzfl6Kr5GkLIR7QTQWel9ISXmzjDfsDtNzbA-1783128942-1.0.1.1-Z4Ft8FKOKrohXvls3Zjgmzuo0jEJBjK5u6YeFZe_638"
+            },
+            {
+              title: "TiBCLaG: Hybrid design approach for a trigger-induced bistable compliant laparoscopic grasper",
+              authors: "JJ Nellikkunnel, P Kumar",
+              venue: "Journal of Medical Devices",
+              link: "https://arxiv.org/abs/2603.18559"
+            },
+            {
+              title: "PyTOaCNN: Topology optimization using an adaptive convolutional neural network in Python",
+              authors: "KS Chadha, P Kumar",
+              venue: "Soft Computing 30 (1), 653–673",
+              link: "https://link.springer.com/article/10.1007/s00500-025-10919-y"
+            }
+          ]
+        },
                 {
           year: "2025",
           items: [
