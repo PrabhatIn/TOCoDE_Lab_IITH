@@ -180,6 +180,52 @@ const Research = () => {
       category: "Book Chapters",
       icon: BookOpen,
       years: [
+                 {
+          year: "2024",
+          items: [
+            {
+              title: "GO-GAN: Geometry optimization generative adversarial network for achieving optimized structures with targeted physical properties",
+              authors: "A Padmaprabhan, S Hari, N Philip Thomas, KS Chadha, S Sidhardh, V Chinthapenta, P Kumar",
+              venue: "International and National Conference on Multidisciplinary Design, Analysis and Optimization, 263-274: iNCMDAO 2024",
+              link: "https://link.springer.com/chapter/10.1007/978-981-95-1723-7_22"
+            },
+                   {
+              title: "Topology Optimization for Efficient Support Structure Designs in Additive Manufacturing",
+              authors: "R Ranjan, P Kumar, C Ayas, M Langelaar",
+              venue: "International and National Conference on Multidisciplinary Design, Analysis and Optimization, 75-85: iNCMDAO 2024",
+              link: "https://link.springer.com/chapter/10.1007/978-981-95-1723-7_8"
+            },
+                      {
+              title: "Topology optimization of contact-aided compliant mechanisms for tracing multi-kink paths",
+              authors: "P Kumar, RA Sauer, A Saxena",
+              venue: "International and National Conference on Multidisciplinary Design, Analysis and Optimization, 43-51: iNCMDAO 2024",
+              link: "https://link.springer.com/chapter/10.1007/978-981-95-1723-7_5"
+            },
+                    {
+              title: "PyTOPress: Python Code for Topology Optimization with Design-Dependent Pressure Loads",
+              authors: "S Saxena, SI Sarkar, P Kumar",
+              venue: "International and National Conference on Multidisciplinary Design, Analysis and Optimization, 3-14: iNCMDAO 2024",
+              link: "https://link.springer.com/chapter/10.1007/978-981-95-1723-7_1"
+            }
+          ]
+        },
+                {
+          year: "2023",
+          items: [
+            {
+              title: "TOaCNN: Adaptive Convolutional Neural Network for Multidisciplinary Topology Optimization",
+              authors: "KS Chadha, P Kumar",
+              venue: "National Conference on Multidisciplinary Analysis and Optimization, 409-416: NCMDAO 2023",
+              link: "https://link.springer.com/chapter/10.1007/978-981-96-1158-4_43"
+            },
+                    {
+              title: "PyHexTop: A Compact Python Code for Topology Optimization Using Hexagonal Elements",
+              authors: "A Agarwal, A Saxena, P Kumar",
+              venue: "National Conference on Multidisciplinary Analysis and Optimization, 329-337: NCMDAO 2023",
+              link: "https://link.springer.com/chapter/10.1007/978-981-96-1158-4_35"
+            }
+          ]
+        },
         {
           year: "2022",
           items: [
