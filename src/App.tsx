@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
@@ -27,16 +27,14 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <Router>
         <div className="flex flex-col min-h-screen">
           <Navbar />
           <main className="flex-1">
             <Routes>
               <Route path="/" element={<Home />} />
-              
-              {/* Added Routes */}
               <Route path="/projects" element={<Projects />} />
-              <Route path="/gallery" element={<Gallery />} /> {/* <--- ADDED THIS LINE */}
+              <Route path="/gallery" element={<Gallery />} />
               <Route path="/research" element={<Research />} />
               <Route path="/publications" element={<Publications />} />
               <Route path="/team" element={<Team />} />
@@ -50,7 +48,7 @@ const App = () => (
           </main>
           <Footer />
         </div>
-      </BrowserRouter>
+      </Router>
     </TooltipProvider>
   </QueryClientProvider>
 );
