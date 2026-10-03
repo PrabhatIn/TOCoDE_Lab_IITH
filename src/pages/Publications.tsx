@@ -12,12 +12,6 @@ const Research = () => {
               {
           year: "2026",
           items: [
-                        {
-              title: "TiBCLaG: Hybrid design approach for a trigger-induced bistable compliant laparoscopic grasper",
-              authors: "JJ Nellikkunnel, P Kumar",
-              venue: "Journal of Medical Devices",
-              link: "https://arxiv.org/abs/2603.18559"
-            },
             {
               title: "Soft pneumatic grippers: Topology optimization, 3D-printing and experimental validation",
               authors: " P Kumar, C Prakash, J Pinskier, D Howard, M Langelaar",
