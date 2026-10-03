@@ -12,12 +12,6 @@ const Research = () => {
               {
           year: "2026",
           items: [
-               {
-              title: "Soft pneumatic grippers: Topology optimization, 3D-printing and experimental validation",
-              authors: " P Kumar, C Prakash, J Pinskier, D Howard, M Langelaar",
-              venue: "Mechanism and Machine Theory 228, 106531",
-              link: "https://www.sciencedirect.com/science/article/pii/S0094114X26001813?__cf_chl_f_tk=janItWwlzfl6Kr5GkLIR7QTQWel9ISXmzjDfsDtNzbA-1783128942-1.0.1.1-Z4Ft8FKOKrohXvls3Zjgmzuo0jEJBjK5u6YeFZe_638"
-            },
             {
               title: "Soft pneumatic grippers: Topology optimization, 3D-printing and experimental validation",
               authors: " P Kumar, C Prakash, J Pinskier, D Howard, M Langelaar",
