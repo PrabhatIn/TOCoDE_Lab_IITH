@@ -9,7 +9,7 @@ const Software = () => {
       citation: "P. Kumar (2023): HoneyTop90: A 90-line MATLAB code for topology optimization using honeycomb tessellation, Optimization and Engineering 24 (2), 1433-1460",
       link: "https://github.com/PrabhatIn/HoneyTop90",
       isEmail: false,
-      image: "/Images/1.jpg", // Updated local path
+      image: `${import.meta.env.BASE_URL}Images/1.jpg`,
       paperLink: "https://arxiv.org/pdf/2201.10248v3",
     },
     {
@@ -17,7 +17,7 @@ const Software = () => {
       citation: "P. Kumar (2023): TOPress: a MATLAB implementation for topology optimization of structures subjected to design-dependent pressure loads, Structural and Multidisciplinary Optimization volume 66, Article number: 97 (2023)",
       link: "https://github.com/PrabhatIn/TOPress",
       isEmail: false,
-      image: "/Images/2.png", // Updated local path
+      image: `${import.meta.env.BASE_URL}Images/3.png`, // Swapped to 3.png
       paperLink: "https://arxiv.org/pdf/2405.07733v2",
     },
     {
@@ -25,7 +25,7 @@ const Software = () => {
       citation: "P. Kumar (2024): SoRoTop: a hitchhiker's guide to topology optimization MATLAB code for design-dependent pneumatic-driven soft robots, Optimization and Engineering 25 (4), 2473–2507",
       link: "https://github.com/PrabhatIn/SoRoTop",
       isEmail: false,
-      image: "/Images/3.png", // Updated local path
+      image: `${import.meta.env.BASE_URL}Images/2.png`, // Swapped to 2.png
       paperLink: "https://arxiv.org/pdf/2401.03372",
     },
     {
@@ -33,7 +33,7 @@ const Software = () => {
       citation: "P. Kumar (2025): TOPress3D: 3D topology optimization with design-dependent pressure loads in MATLAB, Optimization and Engineering 26(3), 1113-1141",
       link: "https://github.com/PrabhatIn/TOPress3D",
       isEmail: false,
-      image: "/Images/4.png", // Updated local path
+      image: `${import.meta.env.BASE_URL}Images/4.png`,
       paperLink: "https://link.springer.com/article/10.1007/s11081-024-09931-2",
     },
     {
@@ -41,7 +41,7 @@ const Software = () => {
       citation: "A. Agarwal, A. Saxena, P. Kumar (2023): PyHexTop: a compact Python code for topology optimization using hexagonal elements, Advances in Multidisciplinary Design, Analysis and Optimization",
       link: "https://github.com/PrabhatIn/PyHexTop",
       isEmail: false,
-      image: "/Images/5.png", // Updated local path
+      image: `${import.meta.env.BASE_URL}Images/5.png`,
       paperLink: "https://arxiv.org/abs/2310.01968",
     },
     {
@@ -49,7 +49,7 @@ const Software = () => {
       citation: "S. Saxena, SI Sarkar, P. Kumar (2024): PyTOPress: Python code for topology optimization with design-dependent pressure loads",
       link: "mailto:pkumar@mae.iith.ac.in",
       isEmail: true,
-      image: "/Images/66.png", // Updated local path
+      image: `${import.meta.env.BASE_URL}Images/66.png`,
       paperLink: "https://link.springer.com/chapter/10.1007/978-981-95-1723-7_1",
     },
     {
@@ -57,7 +57,7 @@ const Software = () => {
       citation: "SI Sarkar, P Kumar (2025): Topology Optimization With Quadrilateral Elements: A Comparative Study, Codes, and Tutorials, Computer Applications in Engineering Education 33 (3), e70031",
       link: "https://github.com/PrabhatIn/PyHexTop",
       isEmail: false,
-      image: "/Images/6.png", // Updated local path
+      image: `${import.meta.env.BASE_URL}Images/6.png`,
       paperLink: "https://onlinelibrary.wiley.com/doi/10.1002/cae.70031?msockid=0f36cda0202b60520d99d82b218661fd",
     },
   ];

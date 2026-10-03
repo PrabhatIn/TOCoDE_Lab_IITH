@@ -11,12 +11,13 @@ import {
   ArrowRight,
   ExternalLink,
   Briefcase,
-  Linkedin 
+  Linkedin,
+  Award
 } from "lucide-react";
 
 const Team = () => {
   const navigate = useNavigate(); 
-  const [activeTab, setActiveTab] = useState("All Students");
+  const [activeTab, setActiveTab] = useState("All Members");
 
   // PRINCIPAL INVESTIGATOR DATA
   const pi = {
@@ -25,7 +26,7 @@ const Team = () => {
     department: "Mechanical & Aerospace Engineering",
     phd: "IIT Kanpur",
     email: "pkumar@mae.iith.ac.in", 
-    image: "/Images/Team/prabhat-kumar.png", 
+    image: `${import.meta.env.BASE_URL}Images/Team/prabhat-kumar.png`, 
     bio: "Leading the research group in topology optimization and computational mechanics.",
     interests: [
       "Topology Optimization",
@@ -45,29 +46,28 @@ const Team = () => {
   };
 
   // CURRENT MEMBERS DATA
+  const postdocs = [
+    { name: "Rama Reddy", role: "Postdoctoral Researcher", image: `${import.meta.env.BASE_URL}Images/Team/RamaReddy.jpg` },
+  ];
+
   const phdStudents = [
-    { name: "Swagatam Islam Sarkar", role: "PhD Scholar", image: "/Images/Team/Swagatam.jpg", linkedin: "https://www.linkedin.com/in/swagatam-islam-sarkar-0b7832107" },
-    { name: "Raghvendra  K", role: "PhD Scholar", image: "/Images/Team/Raghvendra.jpg" },
-    { name: "Sukka Siddhardha", role: "PhD Scholar", image: "/Images/Team/sukka.jpg" },
+    { name: "Swagatam Islam Sarkar", role: "PhD Scholar", image: `${import.meta.env.BASE_URL}Images/Team/Swagatam.jpg`, linkedin: "https://www.linkedin.com/in/swagatam-islam-sarkar-0b7832107" },
+    { name: "Raghvendra  K", role: "PhD Scholar", image: `${import.meta.env.BASE_URL}Images/Team/Raghvendra.jpg` },
+    { name: "Sukka Siddhardha", role: "PhD Scholar", image: `${import.meta.env.BASE_URL}Images/Team/sukka.jpg` },
+    { name: "Aman", role: "PhD Scholar", image: `${import.meta.env.BASE_URL}Images/Team/Aman.jpg` },
+    { name: "Bhargav Kumar", role: "PhD Scholar", image: `${import.meta.env.BASE_URL}Images/Team/Bhargav.jpg` },
   ];
 
   const mtechStudents = [
-    { name: "Chinmay Kishor Shrirame", role: "M.Tech Student", image: "/Images/Team/Chinmay.jpg", linkedin: "https://www.linkedin.com/in/chinmay-shrirame-678542356?utm_source=share&utm_campaign=share" },
-    { name: "Gopaljit Raj", role: "M.Tech Student", image: "/Images/Team/Gopaljit.png" },
-    { name: "Avinash Yadav", role: "M.Tech Student", image: "/Images/Team/Avinash.jpg" },
-    { name: "Mukki Prasanth Raju", role: "M.Tech Student", image: "/Images/Team/Mukki.jpg" },
-    { name: "Nikhil Vijay Chavan", role: "M.Tech Student", image: "/Images/Team/Nikhil.jpg" },
-    { name: "Arundhati Sonawane", role: "M.Tech Student", image: "/Images/Team/Aru.png" }, 
-    { name: "Aryuemaan Kumar Chowdhury", role: "M.Tech Student", image: "/Images/Team/Ary.jpg", linkedin: "https://www.linkedin.com/in/aryuemaanchowdhury/" },
+    { name: "Arundhati Sonawane", role: "M.Tech Student", image: `${import.meta.env.BASE_URL}Images/Team/Aru.png` }, 
+    { name: "Aryuemaan Kumar Chowdhury", role: "M.Tech Student", image: `${import.meta.env.BASE_URL}Images/Team/Ary.jpg`, linkedin: "https://www.linkedin.com/in/aryuemaanchowdhury/" },
+    { name: "Ninad Joshi", role: "M.Tech Student", image: `${import.meta.env.BASE_URL}Images/Team/Ninad.jpg` },
+    { name: "Prashanth M", role: "M.Tech Student", image: `${import.meta.env.BASE_URL}Images/Team/Prashanth.jpg` },
   ];
 
-  const btechStudents = [
-     { name: "A. Padmaprabhan", role: "B.Tech Student", image: "/Images/Team/Padmaprabhan.png", linkedin: "https://www.linkedin.com/in/padmaprabhan-a-99568a24b?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
-     { name: "Joel J Nellikkunnel", role: "B.Tech Student", image: "/Images/Team/Joel.jpg" },
-     { name: "Pardu", role: "B.Tech Student", image: "/Images/Team/Satyarth.jpg" },
-  ];
+  const btechStudents: { name: string; role: string; image: string; linkedin?: string }[] = [];
 
-  // FORMER MEMBERS DATA (Merged Alumni and Passed Out Students)
+  // FORMER MEMBERS DATA
   const formerMembers = [
     { name: "Duru Bhargav Kumar", role: "M.Tech", company: "-" },
     { name: "Aishwarya Desai", role: "M.Tech", company: "-" },
@@ -78,6 +78,14 @@ const Team = () => {
     { name: "Dehlia Menge", role: "MSc student, TU Delft", company: "-" },
     { name: "Shawn Dmello", role: "MSc student, TU Delft", company: "-" },
     { name: "Aditi Agarwal", role: "B.Tech student, IIT-H", company: "-" },
+    { name: "A. Padmaprabhan", role: "B.Tech", company: "-" },
+    { name: "Joel J Nellikkunnel", role: "B.Tech", company: "-" },
+    { name: "Pardu", role: "B.Tech", company: "-" },
+    { name: "Chinmay Kishor Shrirame", role: "M.Tech", company: "-" },
+    { name: "Gopaljit Raj", role: "M.Tech", company: "-" },
+    { name: "Avinash Yadav", role: "M.Tech", company: "-" },
+    { name: "Mukki Prasanth Raju", role: "M.Tech", company: "-" },
+    { name: "Nikhil Vijay Chavan", role: "M.Tech", company: "-" },
   ];
 
   const handlePIClick = () => {
@@ -85,7 +93,7 @@ const Team = () => {
   };
 
   // Tabs for Filtering
-  const FILTER_TABS = ["All Students", "PhDs", "M.Tech Students", "B.Tech Students"];
+  const FILTER_TABS = ["All Members", "Postdoc", "PhDs", "M.Tech Students", "B.Tech Students"];
 
   return (
     <div className="min-h-screen pt-20 bg-background font-sans selection:bg-primary/10">
@@ -196,15 +204,19 @@ const Team = () => {
 
             {/* Conditionally Rendered Groups based on Active Tab */}
             <div className="space-y-16">
-              {(activeTab === "All Students" || activeTab === "PhDs") && phdStudents.length > 0 && (
+              {(activeTab === "All Members" || activeTab === "Postdoc") && postdocs.length > 0 && (
+                <StudentGroup title="Postdoctoral Researcher" icon={Award} students={postdocs} />
+              )}
+
+              {(activeTab === "All Members" || activeTab === "PhDs") && phdStudents.length > 0 && (
                 <StudentGroup title="PhD Scholars" icon={School} students={phdStudents} />
               )}
               
-              {(activeTab === "All Students" || activeTab === "M.Tech Students") && mtechStudents.length > 0 && (
+              {(activeTab === "All Members" || activeTab === "M.Tech Students") && mtechStudents.length > 0 && (
                 <StudentGroup title="M.Tech Students" icon={GraduationCap} students={mtechStudents} />
               )}
               
-              {(activeTab === "All Students" || activeTab === "B.Tech Students") && btechStudents.length > 0 && (
+              {(activeTab === "All Members" || activeTab === "B.Tech Students") && btechStudents.length > 0 && (
                 <StudentGroup title="B.Tech Students" icon={User} students={btechStudents} />
               )}
             </div>
@@ -249,7 +261,7 @@ const Team = () => {
   );
 };
 
-// Reusable Component for Student Groups
+// Reusable Component for Member Groups
 const StudentGroup = ({ title, icon: Icon, students }: { title: string, icon: any, students: any[] }) => (
   <div className="animate-in fade-in duration-500">
     <div className="flex items-center gap-3 mb-8">
@@ -266,7 +278,7 @@ const StudentGroup = ({ title, icon: Icon, students }: { title: string, icon: an
   </div>
 );
 
-// Minimalist Student Card
+// Minimalist Student / Member Card
 const StudentCard = ({ student }: { student: { name: string; role: string; image: string; linkedin?: string } }) => (
   <div className="group relative flex flex-col bg-card border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-md">
     <div className="aspect-[4/5] w-full bg-muted overflow-hidden relative">

@@ -82,10 +82,10 @@ export const Navbar = () => {
             {/* IITH Logo - Referenced from public folder */}
             <a href="https://www.iith.ac.in" target="_blank" rel="noreferrer">
                 <img 
-                    src="/Images/IITH.png" 
-                    alt="IIT Hyderabad Logo" 
-                    className="h-12 w-auto object-contain hover:opacity-80 transition-opacity" 
-                />
+                src={`${import.meta.env.BASE_URL}Images/IITH.png`} 
+                alt="IIT Hyderabad Logo" 
+                className="h-12 w-auto object-contain hover:opacity-80 transition-opacity" 
+              />
             </a>
 
             {/* Mobile Menu Button (Visible only on mobile) */}

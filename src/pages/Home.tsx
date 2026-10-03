@@ -67,7 +67,7 @@ const RESEARCH_DATA: HeroSlideData[] = [
       { name: "2D MATLAB code paper", link: "https://link.springer.com/article/10.1007/s00158-019-02442-0" },
       { name: "2D pressure-driven CMs paper", link: "https://www.sciencedirect.com/science/article/pii/S0094114X22001367" }
     ],
-    video: "/Images/research1.mp4" 
+    video: `${import.meta.env.BASE_URL}Images/research1.mp4`
   },
   { 
     id: "2",
@@ -77,7 +77,7 @@ const RESEARCH_DATA: HeroSlideData[] = [
       { name: "2D pressure-loaded structure paper", link: "https://link.springer.com/article/10.1007/s00158-023-03533-9" },
       { name: "3D MATLAB code paper", link: "https://link.springer.com/article/10.1007/s11081-024-09931-2" }
     ],
-    video: "/Images/research_2.mp4"
+    video: `${import.meta.env.BASE_URL}Images/research_2.mp4`
   },
   { 
     id: "3",
@@ -85,7 +85,7 @@ const RESEARCH_DATA: HeroSlideData[] = [
     papers: [
       { name: "TO Self-weight Code Paper", link: "https://link.springer.com/article/10.1007/s00158-022-03232-x" }
     ],
-    video: "/Images/research_3.mp4"
+    video: `${import.meta.env.BASE_URL}Images/research_3.mp4`
   },
   { 
     id: "4",
@@ -95,7 +95,7 @@ const RESEARCH_DATA: HeroSlideData[] = [
       { name: "Shape morphing CCMs paper", link: "https://asmedigitalcollection.asme.org/mechanicaldesign/article/138/6/062301/472583/Synthesis-of-C0-Path-Generating-Contact-Aided" },
       { name: "External Contact paper", link: "https://www.sciencedirect.com/science/article/pii/S0094114X20303529" }
     ],
-    video: "/Images/research_4.mp4"
+    video: `${import.meta.env.BASE_URL}Images/research_4.mp4`
   },
   { 
     id: "5",
@@ -103,7 +103,7 @@ const RESEARCH_DATA: HeroSlideData[] = [
     papers: [
       { name: "Download Paper", link: "https://link.springer.com/article/10.1007/s00158-020-02764-4" }
     ],
-    video: "/Images/research_5.mp4"
+    video: `${import.meta.env.BASE_URL}Images/research_5.mp4`
   },
   { 
     id: "6",
@@ -111,7 +111,7 @@ const RESEARCH_DATA: HeroSlideData[] = [
     papers: [
       { name: "Download paper", link: "https://www.sciencedirect.com/science/article/pii/S0045794918315232" }
     ],
-    video: "/Images/research_6.mp4"
+    video: `${import.meta.env.BASE_URL}Images/research_6.mp4`
   },
   { 
     id: "7",
@@ -119,7 +119,7 @@ const RESEARCH_DATA: HeroSlideData[] = [
     papers: [
       { name: "Download Paper", link: "https://link.springer.com/article/10.1007/s00158-015-1272-6" }
     ],
-    video: "/Images/research_7.mp4"
+    video: `${import.meta.env.BASE_URL}Images/research_7.mp4`
   },
 ];
 
@@ -159,14 +159,14 @@ const SOFTWARE_ITEMS: SoftwareItem[] = [
     authors: "A. Agarwal, A. Saxena, P. Kumar (2023)",
     citationDetails: "PyHexTop: a compact Python code for topology optimization using hexagonal elements, Advances in Multidisciplinary Design, Analysis and Optimization"
   },
-    {
+  {
     title: "topQ8, topQ9, topQ8CM, topQ9CM, topQ8Press, topQ9Press",
     link: "https://onlinelibrary.wiley.com/doi/abs/10.1002/cae.70031", 
     paperLink: "https://onlinelibrary.wiley.com/doi/abs/10.1002/cae.70031",
     authors: "S.I. Sarkar, P. Kumar (2025)",
     citationDetails: "Topology Optimization With Quadrilateral Elements: A Comparative Study, Codes, and Tutorials, Computer Applications in Engineering Education 33 (3), e70031"
   },
-      {
+  {
     title: "PyTOaCNN",
     link: "https://link.springer.com/article/10.1007/s00500-025-10919-y",
     paperLink: "https://link.springer.com/article/10.1007/s00500-025-10919-y",
@@ -193,17 +193,17 @@ const RESEARCH_AREAS = [
     title: "Computational Design",
     description: "Novel methodologies for design automation and generative engineering",
   },
-    {
+  {
     icon: Lightbulb,
     title: "Soft Robotics",
     description: "Soft robots design optimization, 3D-printing, and experimental verification",
   },
-   {
+  {
     icon: Lightbulb,
     title: "AI/ML-design",
     description: "Deep Leaning-based designs",
   },
-    {
+  {
     icon: Lightbulb,
     title: "Compliant Mechanisms",
     description: "Flexible structures, prototyping and validation",
@@ -322,7 +322,7 @@ const Home = () => {
               </span>
             </h1>
 
-            {/* RESTORED: Research Areas Grid (Small Tags) */}
+            {/* Research Areas Grid (Small Tags) */}
             <div className="flex flex-wrap justify-center gap-2 mb-6 max-w-5xl mx-auto">
                 {[
                   "Multi-disciplinary/-scale Topology Optimization",
@@ -494,7 +494,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                {/* --- RIGHT: EDUCATIONAL SOFTWARE (Same style as News) --- */}
+                {/* --- RIGHT: EDUCATIONAL SOFTWARE --- */}
                 <div className="h-[500px] bg-card border border-border rounded-2xl shadow-lg flex flex-col overflow-hidden relative">
                     <div className="p-5 border-b border-border bg-card z-10 flex justify-between items-center shadow-sm">
                         <h3 className="font-bold text-xl flex items-center gap-2">
@@ -508,7 +508,6 @@ const Home = () => {
                         <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-card to-transparent z-10 pointer-events-none" />
                         <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-card to-transparent z-10 pointer-events-none" />
 
-                        {/* Duplicated array for seamless scrolling loop */}
                         <div className="animate-vertical-scroll p-4 space-y-4">
                             {[...SOFTWARE_ITEMS, ...SOFTWARE_ITEMS].map((soft, i) => (
                                 <div key={i} className="p-4 rounded-xl bg-white border border-border/50 hover:border-blue-400 hover:shadow-md transition-all duration-300 cursor-pointer group">
