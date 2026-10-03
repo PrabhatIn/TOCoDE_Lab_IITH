@@ -15,6 +15,14 @@ import {
   Award
 } from "lucide-react";
 
+// Helper function to safely resolve public asset paths with GitHub Pages base URL
+const getAssetUrl = (path: string) => {
+  const baseUrl = import.meta.env.BASE_URL || "/";
+  const cleanBase = baseUrl.endsWith("/") ? baseUrl : `${baseUrl}/`;
+  const cleanPath = path.startsWith("/") ? path.slice(1) : path;
+  return `${cleanBase}${cleanPath}`;
+};
+
 const Team = () => {
   const navigate = useNavigate(); 
   const [activeTab, setActiveTab] = useState("All Members");
@@ -26,7 +34,7 @@ const Team = () => {
     department: "Mechanical & Aerospace Engineering",
     phd: "IIT Kanpur",
     email: "pkumar@mae.iith.ac.in", 
-    image: `${import.meta.env.BASE_URL}Images/Team/prabhat-kumar.png`, 
+    image: getAssetUrl("Images/Team/prabhat-kumar.png"), 
     bio: "Leading the research group in topology optimization and computational mechanics.",
     interests: [
       "Topology Optimization",
@@ -45,29 +53,32 @@ const Team = () => {
     ]
   };
 
-  // CURRENT MEMBERS DATA
+  // POSTDOC RESEARCHERS
   const postdocs = [
-    { name: "Rama Reddy", role: "Postdoctoral Researcher", image: `${import.meta.env.BASE_URL}Images/Team/RamaReddy.jpg` },
+    { name: "Rama Reddy", role: "Postdoctoral Researcher", image: getAssetUrl("Images/Team/RamaReddy.jpg") },
   ];
 
+  // PHD SCHOLARS
   const phdStudents = [
-    { name: "Swagatam Islam Sarkar", role: "PhD Scholar", image: `${import.meta.env.BASE_URL}Images/Team/Swagatam.jpg`, linkedin: "https://www.linkedin.com/in/swagatam-islam-sarkar-0b7832107" },
-    { name: "Raghvendra  K", role: "PhD Scholar", image: `${import.meta.env.BASE_URL}Images/Team/Raghvendra.jpg` },
-    { name: "Sukka Siddhardha", role: "PhD Scholar", image: `${import.meta.env.BASE_URL}Images/Team/sukka.jpg` },
-    { name: "Aman", role: "PhD Scholar", image: `${import.meta.env.BASE_URL}Images/Team/Aman.jpg` },
-    { name: "Bhargav Kumar", role: "PhD Scholar", image: `${import.meta.env.BASE_URL}Images/Team/Bhargav.jpg` },
+    { name: "Swagatam Islam Sarkar", role: "PhD Scholar", image: getAssetUrl("Images/Team/Swagatam.jpg"), linkedin: "https://www.linkedin.com/in/swagatam-islam-sarkar-0b7832107" },
+    { name: "Raghvendra K", role: "PhD Scholar", image: getAssetUrl("Images/Team/Raghvendra.jpg") },
+    { name: "Sukka Siddhardha", role: "PhD Scholar", image: getAssetUrl("Images/Team/sukka.jpg") },
+    { name: "Aman", role: "PhD Scholar", image: getAssetUrl("Images/Team/Aman.jpg") },
+    { name: "Bhargav Kumar", role: "PhD Scholar", image: getAssetUrl("Images/Team/Bhargav.jpg") },
   ];
 
+  // M.TECH STUDENTS
   const mtechStudents = [
-    { name: "Arundhati Sonawane", role: "M.Tech Student", image: `${import.meta.env.BASE_URL}Images/Team/Aru.png` }, 
-    { name: "Aryuemaan Kumar Chowdhury", role: "M.Tech Student", image: `${import.meta.env.BASE_URL}Images/Team/Ary.jpg`, linkedin: "https://www.linkedin.com/in/aryuemaanchowdhury/" },
-    { name: "Ninad Joshi", role: "M.Tech Student", image: `${import.meta.env.BASE_URL}Images/Team/Ninad.jpg` },
-    { name: "Prashanth M", role: "M.Tech Student", image: `${import.meta.env.BASE_URL}Images/Team/Prashanth.jpg` },
+    { name: "Arundhati Sonawane", role: "M.Tech Student", image: getAssetUrl("Images/Team/Aru.png") }, 
+    { name: "Aryuemaan Kumar Chowdhury", role: "M.Tech Student", image: getAssetUrl("Images/Team/Ary.jpg"), linkedin: "https://www.linkedin.com/in/aryuemaanchowdhury/" },
+    { name: "Ninad Joshi", role: "M.Tech Student", image: getAssetUrl("Images/Team/Ninad.jpg") },
+    { name: "Prashanth M", role: "M.Tech Student", image: getAssetUrl("Images/Team/Prashanth.jpg") },
   ];
 
+  // B.TECH STUDENTS
   const btechStudents: { name: string; role: string; image: string; linkedin?: string }[] = [];
 
-  // FORMER MEMBERS DATA
+  // FORMER MEMBERS
   const formerMembers = [
     { name: "Duru Bhargav Kumar", role: "M.Tech", company: "-" },
     { name: "Aishwarya Desai", role: "M.Tech", company: "-" },
@@ -92,7 +103,6 @@ const Team = () => {
     navigate("/prabhat-kumar"); 
   };
 
-  // Tabs for Filtering
   const FILTER_TABS = ["All Members", "Postdoc", "PhDs", "M.Tech Students", "B.Tech Students"];
 
   return (
@@ -123,13 +133,13 @@ const Team = () => {
               className="group cursor-pointer relative bg-card border border-border hover:border-primary/50 transition-all duration-300 rounded-xl overflow-hidden shadow-sm hover:shadow-xl"
             >
               <div className="flex flex-col md:flex-row">
-                <div className="md:w-1/3 relative overflow-hidden bg-muted">
+                <div className="md:w-1/3 relative overflow-hidden bg-muted min-h-[300px]">
                   <img 
                     src={pi.image} 
                     alt={pi.name} 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     onError={(e) => {
-                      e.currentTarget.src = "https://ui-avatars.com/api/?name=Prabhat+Kumar&background=random"; 
+                      e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(pi.name)}&background=random`; 
                     }}
                   />
                   <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -202,7 +212,7 @@ const Team = () => {
               ))}
             </div>
 
-            {/* Conditionally Rendered Groups based on Active Tab */}
+            {/* Rendered Groups based on Active Tab */}
             <div className="space-y-16">
               {(activeTab === "All Members" || activeTab === "Postdoc") && postdocs.length > 0 && (
                 <StudentGroup title="Postdoctoral Researcher" icon={Award} students={postdocs} />
@@ -261,7 +271,7 @@ const Team = () => {
   );
 };
 
-// Reusable Component for Member Groups
+// Member Group Container
 const StudentGroup = ({ title, icon: Icon, students }: { title: string, icon: any, students: any[] }) => (
   <div className="animate-in fade-in duration-500">
     <div className="flex items-center gap-3 mb-8">
@@ -278,7 +288,7 @@ const StudentGroup = ({ title, icon: Icon, students }: { title: string, icon: an
   </div>
 );
 
-// Minimalist Student / Member Card
+// Individual Member Card
 const StudentCard = ({ student }: { student: { name: string; role: string; image: string; linkedin?: string } }) => (
   <div className="group relative flex flex-col bg-card border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-md">
     <div className="aspect-[4/5] w-full bg-muted overflow-hidden relative">
